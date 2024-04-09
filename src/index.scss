@@ -1,0 +1,13 @@
+@import './sass/reset';
+body {
+	font-size: 1.6rem;
+	font-family: Helvetica, sans-serif;
+	min-width: 320px;
+}
+
+.custom {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    padding: 2rem;
+}
