@@ -42,3 +42,4 @@ export const App = () => {
 	);
 };
 
+//TODO: zainstalować i skonfigurować Router. 
