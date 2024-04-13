@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { Wrapper } from './components/Wrapper/Wrapper';
 import './index.scss';
 import { AppContext } from './context/AppContext';
 import { SectionHome } from './components/SectionHome/HomeSection';

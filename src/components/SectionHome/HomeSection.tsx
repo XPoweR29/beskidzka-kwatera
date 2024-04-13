@@ -2,6 +2,7 @@ import { Wrapper } from '../Wrapper/Wrapper';
 import styles from './HomeSection.module.scss';
 import vector_small from '../../assets/img/homeVector_small.svg';
 import flowers from '../../assets/img/flowers.png';
+import { ScrollBtn } from '../ScrollBtn/ScrollBtn';
 
 export const SectionHome = () => {
 	return (
@@ -20,6 +21,8 @@ export const SectionHome = () => {
 				<a href='#pricing' className={styles.ctaBtn}>
 					Zarezerwuj teraz!
 				</a>
+
+				<ScrollBtn/>
 			</Wrapper>
 		</section>
 	);

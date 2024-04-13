@@ -35,6 +35,11 @@
 	}
 	@media (min-width: 992px) {
 		max-width: 960px;
+		padding: 1em 2em;
+
+		.logo {
+			padding: 0;
+		}
 	}
 	@media (min-width: 1200px) {
 		max-width: 1140px;

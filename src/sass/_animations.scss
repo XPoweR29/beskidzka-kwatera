@@ -1,0 +1,5 @@
+@keyframes fallingArrow {
+    0%, 100% {opacity: 0; bottom: 0.8em;}
+    30% {opacity: 1;}
+    100% {opacity: 0; bottom: 0;}
+}
