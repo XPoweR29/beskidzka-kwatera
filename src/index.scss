@@ -1,13 +1,13 @@
 @import './sass/reset';
-body {
-	font-size: 1.6rem;
-	font-family: Helvetica, sans-serif;
-	min-width: 320px;
-}
+@import './sass/hamburger';
 
-.custom {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-    padding: 2rem;
+body {
+	font-size: 1.4rem;
+	font-family: "Poppins", sans-serif;
+	min-width: 320px;
+	height: 200vh;
+
+	@media(min-width: 400px) {
+		font-size: 1.6rem;
+	}
 }

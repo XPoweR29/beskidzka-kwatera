@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import { Wrapper } from './components/Wrapper/Wrapper';
 import './index.scss';
 import { AppContext } from './context/AppContext';
+import { SectionHome } from './components/SectionHome/HomeSection';
+import { Nav } from './components/Nav/Nav';
 
 export const App = () => {
 	const [breakpoint, setBreakpoint] = useState({
@@ -35,11 +37,8 @@ export const App = () => {
 
 	return (
 		<AppContext.Provider value={contextValues}>
-			<Wrapper className='custom'>
-				<h3>Hello World!</h3>
-			</Wrapper>
+			<Nav/>
+			<SectionHome/>
 		</AppContext.Provider>
 	);
 };
-
-//TODO: zainstalować i skonfigurować Router. 

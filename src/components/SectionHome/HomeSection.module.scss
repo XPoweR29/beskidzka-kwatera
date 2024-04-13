@@ -1,0 +1,86 @@
+@import '../../sass/colors';
+@import '../../sass/mixins';
+
+.home {
+	height: 100svh;
+	padding-top: 9em;
+
+	.wrapper {
+		position: relative;
+		border: 1px solid red;
+	}
+
+	.heading {
+		@include heading;
+		text-align: center;
+		// font-size: 3.5rem;
+		// text-transform: uppercase;
+		// line-height: 40px;
+		// font-weight: 900;
+		// color: rgb(75, 42, 4);
+	}
+
+	.text {
+		@include text;
+		margin-top: 1.5em;
+		text-align: justify;
+	}
+
+	.ctaBtn {
+		display: block;
+		width: fit-content;
+		margin-top: 5em;
+		padding: 0.8em 0.5em;
+		font-weight: bold;
+		color: $main-orange;
+		border: 2px solid $main-orange;
+		border-radius: 10px;
+		transition: background-color 0.4s, color 0.4s, scale 0.3s;
+
+		&:hover {
+			background-color: $main-orange;
+			color: $dark-brown;
+			scale: 0.95;
+		}
+	}
+
+	.home_img {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		width: 80%;
+	}
+
+	.flowers_img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		max-width: 700px;
+		z-index: -1;
+	}
+}
+
+@media (min-width: 375px) {
+	.home {
+		.text {
+			margin-top: 2em;
+		}
+
+		.ctaBtn {
+			margin-top: 7em;
+		}
+
+		.home_img {
+			width: 90%;
+		}
+	}
+}
+
+//height
+
+@media(min-height: 650px) { 
+	.home {
+		padding-top: 10em;
+	}
+}

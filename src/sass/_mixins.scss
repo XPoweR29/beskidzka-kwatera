@@ -1,0 +1,21 @@
+@import './colors';
+
+@mixin shadow {
+    box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
+}
+
+@mixin heading {
+    font-size: 3.5rem;
+    font-weight: 900;
+    line-height: 40px;
+    color: $dark-brown;
+    text-transform: uppercase;
+
+    // @media (min-width: 576px) { //FIXME: Zastanów się czy to zastosować...
+    //     font-size: 4rem;
+    // }
+}
+
+@mixin text {
+    color: $dark-gray;
+}
