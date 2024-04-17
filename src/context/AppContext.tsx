@@ -10,6 +10,10 @@ interface Breakpoints {
 
 type AppContextType = {
 	breakpoint: Breakpoints;
+	mobileMenuShown: boolean;
+	setMobileMenuShown: (shown: boolean) => void;
+	visibleSection: string;
+	setVisibleSection: (sectionId: string) => void;
 };
 
 export const AppContext = createContext<AppContextType | null>(null);

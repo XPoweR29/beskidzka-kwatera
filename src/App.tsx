@@ -5,6 +5,8 @@ import { SectionHome } from './components/SectionHome/HomeSection';
 import { Nav } from './components/Nav/Nav';
 
 export const App = () => {
+	const [visibleSection, setVisibleSection] = useState<string>('');
+	const [mobileMenuShown, setMobileMenuShown] = useState(false);
 	const [breakpoint, setBreakpoint] = useState({
 		sm: window.innerWidth >= 576,
 		md: window.innerWidth >= 768,
@@ -32,12 +34,14 @@ export const App = () => {
 
 	const contextValues = {
 		breakpoint,
+		mobileMenuShown, setMobileMenuShown,
+		visibleSection, setVisibleSection,
 	};
 
 	return (
 		<AppContext.Provider value={contextValues}>
-			<Nav/>
-			<SectionHome/>
+			<Nav />
+			<SectionHome />
 		</AppContext.Provider>
 	);
 };
