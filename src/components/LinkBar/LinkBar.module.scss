@@ -1,4 +1,65 @@
+@import '../../sass/colors';
+@import '../../sass/animations';
+
 .linkbar {
-    display: flex;
-    gap: 1.2em;
+	display: flex;
+	gap: 1.2em;
+
+	.link {
+		position: relative;
+		color: rgba(0, 0, 0, 0.65);
+		transition: color 0.2s;
+
+		&::before {
+			position: absolute;
+			content: '';
+			bottom: -2px;
+			left: 50%;
+			transform: translateX(-50%);
+			height: 2px;
+			width: 0;
+			background-color: $main-orange;
+			transition: width 0.2s;
+		}
+
+		&:hover {
+			color: $dark-brown;
+
+			&::before {
+				width: 100%;
+			}
+		}
+
+		&--active {
+			color: $dark-brown;
+
+			&::before {
+				position: absolute;
+				content: '';
+				bottom: -2px;
+				left: 50%;
+				transform: translateX(-50%);
+				height: 2px;
+				width: 100%;
+				background-color: $main-orange;
+			}
+		}
+	}
+}
+
+@media (max-width: 992px) {
+	.linkbar {
+		position: absolute;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 3em;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+		.link {
+			animation: slide-in-top 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+		}
+	}
 }

@@ -1,19 +1,17 @@
-import { Wrapper } from '../Wrapper/Wrapper';
 import styles from './Nav.module.scss';
 import logo from '../../assets/img/logo.svg';
 import { LinkBar } from '../LinkBar/LinkBar';
 import { BurgerBtn } from '../BurgerBtn/BurgerBtn';
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import { AppContext } from '../../context/AppContext';
 
 export const Nav = () => {
-	const {breakpoint} = useContext(AppContext)!;
-	const [mobileMenuShown, setMobileMenuShown] = useState(false);
-
+	const { breakpoint, mobileMenuShown, setMobileMenuShown } = useContext(AppContext)!;
+	
 	return (
-		<Wrapper className={styles.wrapper}>
-			<nav className={styles.nav}>
-				<a href='/' className={styles.logo}>
+		<nav className={`${styles.nav} ${mobileMenuShown ? styles['activeMobileMenu'] : '' }`}>
+			<div className={styles.navbar_container}>
+				<a href='#' className={styles.logo}>
 					<img src={logo} />
 				</a>
 
@@ -26,7 +24,9 @@ export const Nav = () => {
 						toggleMenu={setMobileMenuShown}
 					/>
 				)}
-			</nav>
-		</Wrapper>
+
+				{mobileMenuShown && <LinkBar/>}
+			</div>
+		</nav>
 	);
 };

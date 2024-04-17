@@ -1,14 +1,21 @@
 import { Wrapper } from '../Wrapper/Wrapper';
-import styles from './HomeSection.module.scss';
+import styles from './HomeSection.module.scss'; 
 import vector_small from '../../assets/img/homeVector_small.svg';
+import vector_large from '../../assets/img/homeVector_large.svg';
 import flowers from '../../assets/img/flowers.png';
 import { ScrollBtn } from '../ScrollBtn/ScrollBtn';
+import { useContext } from 'react';
+import { AppContext } from '../../context/AppContext';
+import { ScrollSpySection } from '../ScrollSpySection/ScrollSpySection';
 
 export const SectionHome = () => {
+	const {breakpoint, setVisibleSection} = useContext(AppContext)!;
+
 	return (
-		<section className={styles.home} id='home'>
+
+		<ScrollSpySection className={styles.home} id='home' onVisible={()=>setVisibleSection('home')}>
 			<img src={flowers} className={styles.flowers_img} />
-			<img src={vector_small} className={styles.home_img} />
+			<img src={breakpoint.lg ? vector_large : vector_small} className={styles.home_img} />
 
 			<Wrapper className={styles.wrapper}>
 				<h1 className={styles.heading}>
@@ -24,6 +31,6 @@ export const SectionHome = () => {
 
 				<ScrollBtn/>
 			</Wrapper>
-		</section>
+		</ScrollSpySection>
 	);
 };

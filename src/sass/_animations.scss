@@ -1,5 +1,25 @@
 @keyframes fallingArrow {
-    0%, 100% {opacity: 0; bottom: 0.8em;}
-    30% {opacity: 1;}
-    100% {opacity: 0; bottom: 0;}
+	0%,
+	100% {
+		opacity: 0;
+		bottom: 0.8em;
+	}
+	30% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		bottom: 0;
+	}
+}
+
+@keyframes slide-in-top {
+	0% {
+		transform: translateZ(-1400px) translateY(-800px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateZ(0) translateY(0);
+		opacity: 1;
+	}
 }

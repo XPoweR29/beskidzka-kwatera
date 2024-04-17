@@ -5,25 +5,33 @@
 	left: 50%;
 	top: 1em;
 	width: 90%;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 0.3em 0;
+	height: 70px;
+	padding: 0.5em 0;
 	@include shadow;
 	transform: translateX(-50%);
 	z-index: 100;
-	
 	border-radius: 10px;
 	background-color: white;
+	transition: height 0.5s;
 
-	.logo {
-		// border: 1px solid red;
+	&.activeMobileMenu {
+		height: 90%;
+	}
+
+	.navbar_container {
 		display: flex;
-		justify-content: center;
+		justify-content: space-between;
 		align-items: center;
-		padding-left: 15px;
-		img {
-			width: 140px;
+
+
+		.logo {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding-left: 15px;
+			img {
+				width: 140px;
+			}
 		}
 	}
 

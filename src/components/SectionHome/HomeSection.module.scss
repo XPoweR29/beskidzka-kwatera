@@ -4,8 +4,13 @@
 .home {
 	position: relative;
 	height: 100svh;
-	min-height: 575px;
+	min-height: 600px;
+	max-height: 1366px;
+	max-width: 2000px;
+	margin: 0 auto;
 	padding-top: 9em;
+	overflow: hidden;
+
 
 	.wrapper {
 		position: relative;
@@ -44,8 +49,11 @@
 		position: absolute;
 		bottom: 0;
 		right: 0;
-		width: 80%;
-		min-width: 256px;
+		// width: 80%;
+		height: 40%;
+		// min-width: 256px;
+
+		// border: 1px solid red;
 	}
 
 	.flowers_img {
@@ -67,20 +75,70 @@
 		.ctaBtn {
 			margin-top: 7em;
 		}
-
-		.home_img {
-			width: 90%;
-		}
 	}
 }
 
 @media (min-width: 768px) {
 	.home {
-		border: 1px solid red;
 		padding-top: 13em;
 		.wrapper {
 			padding: 0 5em;
 		}
+
+		.home_img {
+			height: 50%;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.home {
+		padding-top: 10em;
+
+		.home_img {
+			top: 0;
+			bottom: auto;
+			height: 100%;
+			width: auto;
+
+			@media (orientation: portrait) {
+				right: -30%;
+			}
+		}
+
+		.heading {
+			text-align: left;
+			width: 45%;
+		}
+
+		.text {
+			text-align: left;
+			width: 40%;
+		}
+
+		.ctaBtn {
+			margin-top: 3em;
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.home {
+		.text,
+		.heading {
+			width: 50%;
+		}
+
+		.home_img {
+			height: 100%;
+			top: 0;
+		}
+	}
+}
+
+@media (min-width: 1400px) and (min-height: 670px) {
+	.home {
+		padding-top: 15em;
 	}
 }
 
@@ -98,10 +156,6 @@
 
 		.text {
 			margin-top: 2em;
-		}
-
-		.home_img {
-			width: 100%;
 		}
 	}
 }
