@@ -1,0 +1,66 @@
+@import '../../sass//mixins';
+
+.offer {
+	padding-top: 15em;
+
+	.folk_sign {
+		width: 300px;
+	}
+
+	.heading {
+		@include heading;
+		text-align: center;
+	}
+
+	.text {
+		@include text;
+		margin-top: 2em;
+		text-align: center;
+
+		.link {
+            @include link;
+		}
+	}
+
+	.sectionImg {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		max-width: 510px;
+		margin-top: 2em;
+
+		.flowers {
+			width: 100%;
+		}
+
+		.photos_img {
+			position: absolute;
+			width: 100%;
+		}
+
+		.link {
+			@include link;
+			position: absolute;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			bottom: 15%;
+			right: 0%;
+            z-index: 2;
+
+            &::before {
+                width: 75%;
+                left: 0;
+                bottom: 0px;
+                transform: translateX(0);
+            }
+
+			.arrow {
+				color: $main-orange;
+				font-size: 3rem;
+			}
+		}
+	}
+}

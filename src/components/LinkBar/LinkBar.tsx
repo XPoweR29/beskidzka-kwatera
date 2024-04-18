@@ -11,10 +11,10 @@ interface menuLink {
 
 export const menuLinks: menuLink[] = [
 	{ name: 'Start', href: '#', id: 'home' },
-	{ name: 'Oferta', href: '#oferta', id: 'offer' },
-	{ name: 'Atrakcje', href: '#atrakcje', id: 'attractions' },
-	{ name: 'Udogodnienia', href: '#udogodnienia', id: 'facilities' },
-	{ name: 'Kontakt', href: '#kontakt', id: 'contact' },
+	{ name: 'Oferta', href: '#oferta', id: 'oferta' },
+	{ name: 'Atrakcje', href: '#atrakcje', id: 'atrakcje' },
+	{ name: 'Udogodnienia', href: '#udogodnienia', id: 'udogodnienia' },
+	{ name: 'Kontakt', href: '#kontakt', id: 'kontakt' },
 ];
 
 export const LinkBar = () => {

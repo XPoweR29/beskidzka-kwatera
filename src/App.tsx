@@ -3,6 +3,8 @@ import './index.scss';
 import { AppContext } from './context/AppContext';
 import { SectionHome } from './components/SectionHome/HomeSection';
 import { Nav } from './components/Nav/Nav';
+import { SectionOffer } from './components/SectionOffer/SectionOffer';
+
 
 export const App = () => {
 	const [visibleSection, setVisibleSection] = useState<string>('');
@@ -42,6 +44,7 @@ export const App = () => {
 		<AppContext.Provider value={contextValues}>
 			<Nav />
 			<SectionHome />
+			<SectionOffer/>
 		</AppContext.Provider>
 	);
 };
