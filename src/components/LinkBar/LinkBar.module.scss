@@ -2,13 +2,21 @@
 @import '../../sass/animations';
 
 .linkbar {
+	position: absolute;
 	display: flex;
-	gap: 1.2em;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 3em;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 
 	.link {
 		position: relative;
 		color: rgba(0, 0, 0, 0.65);
 		transition: color 0.2s;
+		animation: slide-in-top 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 
 		&::before {
 			position: absolute;
@@ -47,19 +55,17 @@
 	}
 }
 
-@media (max-width: 992px) {
+
+
+@media(min-width: 992px) {
 	.linkbar {
-		position: absolute;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		gap: 3em;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
+		flex-direction: row;
+		position: static;
+		transform: translate(0, 0);
+		gap: 1.2em;
 
 		.link {
-			animation: slide-in-top 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+			animation: none;
 		}
 	}
 }
