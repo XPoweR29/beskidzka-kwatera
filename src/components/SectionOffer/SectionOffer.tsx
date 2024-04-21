@@ -7,6 +7,7 @@ import offer_photots from '../../assets/img/offer_photos.png';
 import flowers from '../../assets/img/flowers_2.png';
 import folk_sign from '../../assets/img/folk_sign.svg';
 import { Icon } from '@iconify/react';
+import { Brief } from '../Brief/Brief';
 
 export const SectionOffer = () => {
 	const { setVisibleSection } = useContext(AppContext)!;
@@ -16,9 +17,12 @@ export const SectionOffer = () => {
 			className={styles.offer}
 			id='oferta'
 			onVisible={() => setVisibleSection('oferta')}>
-			<img src={folk_sign} className={styles.folk_sign} draggable='false' />
+			<Wrapper className={styles.wrapper}>
 
-			<Wrapper>
+				<img src={folk_sign} className={styles.folk_sign} draggable='false' />
+				
+
+				<Brief className={styles.attractions_brief}/>	
 				<h2 className={styles.heading}>Nasza Oferta</h2>
 				<p className={styles.text}>
 					Odkryj idealne miejsce na wypoczynek w Beskidach, gdzie czekają na
@@ -30,12 +34,11 @@ export const SectionOffer = () => {
 					znajduje się tylko 10 minut jazdy samochodem. Zaplanuj swój pobyt w
 					sercu beskidzkiej natury już dziś, a więcej naszych przestrzeni
 					znajdziesz w{' '}
-					<a href='#' className={styles.link}>
+					<a href='/galeria' className={styles.link}>
 						galerii
 					</a>
 					.
 				</p>
-
 				<div className={styles.sectionImg}>
 					<a href='#' className={styles.link}>
 						Zobacz więcej
@@ -48,9 +51,6 @@ export const SectionOffer = () => {
 						draggable='false'
 					/>
 				</div>
-
-				
-
 			</Wrapper>
 		</ScrollSpySection>
 	);

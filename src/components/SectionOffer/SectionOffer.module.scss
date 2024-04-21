@@ -1,14 +1,28 @@
 @import '../../sass//mixins';
 
 .offer {
-	padding-top: 15em;
+	position: relative;
+	padding-top: 25em;
+	background: linear-gradient(white, #dfdfdf);
+
+	.attractions_brief {
+		position: absolute;
+		top: -25px;
+		right: 15px;
+		perspective: 200px;
+	}
 
 	.folk_sign {
-		width: 300px;
+		position: absolute;
+		top: 10%;
+		left: 0;
+		width: 170px;
+		z-index: 0;
 	}
 
 	.heading {
 		@include heading;
+		position: relative;
 		text-align: center;
 	}
 
@@ -18,7 +32,7 @@
 		text-align: center;
 
 		.link {
-            @include link;
+			@include link;
 		}
 	}
 
@@ -29,6 +43,7 @@
 		align-items: center;
 		width: 100%;
 		max-width: 510px;
+		margin: 0 auto;
 		margin-top: 2em;
 
 		.flowers {
@@ -48,19 +63,128 @@
 			justify-content: center;
 			bottom: 15%;
 			right: 0%;
-            z-index: 2;
+			z-index: 2;
 
-            &::before {
-                width: 75%;
-                left: 0;
-                bottom: 0px;
-                transform: translateX(0);
-            }
+			&::before {
+				width: 75%;
+				left: 0;
+				bottom: 0px;
+				transform: translateX(0);
+			}
 
 			.arrow {
 				color: $main-orange;
-				font-size: 3rem;
+				font-size: 2.5rem;
 			}
+		}
+	}
+}
+
+@media (min-width: 500px) {
+	.offer {
+		.attractions_brief {
+			right: 7%;
+		}
+
+		.folk_sign {
+			top: 5%;
+			left: -10%;
+			width: 260px;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.offer {
+		.attractions_brief {
+			right: 10%;
+		}
+
+		.folk_sign {
+			top: 5%;
+			left: -7%;
+			width: 280px;
+		}
+	}
+}
+@media (min-width: 992px) {
+	.offer {
+		padding-top: 30em;
+		padding-bottom: 2em;
+		overflow-x: clip;
+
+		.wrapper {
+			position: relative;
+		}
+
+		.attractions_brief {
+			top: -230%;
+			right: 0;
+		}
+
+		.folk_sign {
+			top: -100%;
+			left: auto;
+			right: -15%;
+		}
+
+		.heading {
+			text-align: right;
+		}
+
+		.text {
+			text-align: right;
+			width: 75%;
+			margin-left: auto;
+		}
+
+		.sectionImg {
+			position: absolute;
+			top: -170%;
+			left: 0;
+		}
+	}
+}
+
+@media(min-width: 1200px) {
+	.offer {
+
+		.attractions_brief {
+			right: 5%;
+		}
+
+		.text {
+			width: 70%;
+		}
+
+		.sectionImg {
+			top: -180%;
+			width: 560px;
+			max-width: fit-content;
+		}
+	}
+}
+
+@media(min-width: 1400px) {
+	.offer {
+
+		.attractions_brief {
+			right: 5%;
+		}
+
+		.folk_sign {
+			width: 300px;
+		}
+
+		.text {
+			width: 65%;
+		}
+
+		.sectionImg {
+			top: -190%;
+			width: 560px;
+			left: 5%;
+			max-width: fit-content;
 		}
 	}
 }

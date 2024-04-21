@@ -1,0 +1,75 @@
+@import '../../sass/colors';
+@import '../../sass/mixins';
+@import '../../sass/animations';
+
+.brief {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	width: 235px;
+	padding: 2em 1em;
+	border-radius: 10px;
+	background-color: #fff;
+	background-image: url('../../assets/img/paper_texture.png');
+	background-size: cover;
+	background-position: center;
+	box-shadow: -5px 0px 40px rgba(0, 0, 0, 0.5);
+	overflow: hidden;
+	opacity: 0;
+	transform-style: preserve-3d;
+
+	&--active {
+		animation: briefEntry 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+	}
+
+	.heading {
+		font-size: 1.8rem;
+		font-weight: 700;
+		color: $dark-brown;
+		line-height: 24px;
+	}
+
+	.text {
+		@include text;
+		margin: 1em auto;
+	}
+
+	a {
+		@include link;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		align-self: flex-end;
+
+		&::before {
+			left: 0;
+			transform: translateX(0);
+			width: 80%;
+		}
+
+		.arrow {
+			color: $main-orange;
+			font-size: 2.5rem;
+		}
+	}
+
+	.emblem {
+		position: absolute;
+		top: 20px;
+		right: -20%;
+		opacity: 0.56;
+		width: 180px;
+	}
+}
+
+@media (min-width: 992px) {
+	.brief {
+		width: 320px;
+		padding: 2em 1.5em;
+		
+		.emblem {
+			right: -12%;
+			width: 200px;
+		}
+	}
+}
