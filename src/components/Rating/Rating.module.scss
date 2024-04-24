@@ -1,0 +1,13 @@
+@import '../../sass/colors';
+
+.rating {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    gap: 0.2em;
+
+	.star {
+		font-size: 1.6rem;
+		color: $main-orange;
+	}
+}

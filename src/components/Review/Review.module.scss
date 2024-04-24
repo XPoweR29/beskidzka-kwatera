@@ -1,0 +1,96 @@
+@import '../../sass/colors';
+
+.reviewContainer {
+	position: relative;
+	height: 230px;
+
+	.birdImg {
+		position: absolute;
+		top: -52%;
+		right: -15%;
+		width: 290px;
+	}
+
+	.contentBox {
+		position: absolute;
+		top: 0;
+		right: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 90%;
+		height: 100%;
+		padding: 3em 1em;
+		border: 1px solid rgba(211, 211, 211, 0.2);
+		border-radius: 50px 50px 0px 50px;
+		box-shadow: -2px 2px 20px rgba(0, 0, 0, 0.3);
+		background-color: white;
+		z-index: 1;
+
+		.comment {
+			max-height: 130px;
+			font-size: 1.2rem;
+			line-height: 15px;
+			overflow: clip;
+			font-style: italic;
+		}
+
+		.quote1,
+		.quote2 {
+			position: absolute;
+			top: 4%;
+			left: 4%;
+			font-size: 4rem;
+			color: $main-orange;
+			opacity: 0.5;
+		}
+
+		.quote2 {
+			top: auto;
+			left: auto;
+			bottom: 2%;
+			right: 2%;
+		}
+
+		.rating {
+			position: absolute;
+			top: 7%;
+			right: 10%;
+		}
+	}
+
+	.userBox {
+		position: absolute;
+		bottom: -17%;
+		left: 0;
+		display: flex;
+		justify-content: start;
+		align-items: end;
+		gap: 0.5em;
+		width: 70%;
+		height: 120px;
+		padding: 0.6em;
+		font-size: 1.5rem;
+		background-color: $main-orange;
+		background-image: linear-gradient(
+			150deg,
+			transparent,
+			transparent,
+			rgba(0, 0, 0, 0.3)
+		);
+		border-radius: 30px;
+		transform: skew(-17deg);
+
+		.icon {
+			font-size: 3rem;
+			transform: skew(17deg);
+			color: white;
+		}
+
+		.username {
+			font-weight: bold;
+			color: $dark-brown;
+			transform: skew(17deg);
+		}
+	}
+}
