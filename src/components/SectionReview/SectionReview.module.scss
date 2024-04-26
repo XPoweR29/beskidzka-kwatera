@@ -1,0 +1,42 @@
+@import '../../sass/mixins';
+@import '../../sass/colors';
+
+.review {
+	padding-top: 3em;
+	overflow-x: clip;
+	padding-bottom: 5em;
+
+	.wrapper {
+		position: relative;
+	}
+
+	.heading {
+		@include heading;
+		text-align: center;
+		width: 100%;
+		font-size: 2.4em;
+	}
+
+	.text {
+		@include text;
+		margin-top: 2em;
+		text-align: center;
+	}
+
+	.reviewSwiper {
+		margin-top: 8em;
+	}
+}
+
+@media(min-width: 992px) {
+	.review {
+		.heading {
+			text-align: left;
+		}
+
+		.text {
+			width: 60%;
+			text-align: left;
+		}
+	}
+}
