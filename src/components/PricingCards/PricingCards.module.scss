@@ -1,0 +1,24 @@
+.cardsBox {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 1em;
+	max-width: 690px;
+	margin-top: 2em;
+
+	.card {
+		scale: 0.9;
+		transition: scale 0.3s;
+		
+        &:hover {
+			scale: 0.95;
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.cardsBox {
+		max-width: fit-content;
+	}
+}

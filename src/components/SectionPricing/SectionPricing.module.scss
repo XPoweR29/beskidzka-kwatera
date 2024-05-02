@@ -1,0 +1,96 @@
+@import '../../sass/mixins';
+@import '../../sass/colors';
+
+.pricing {
+	padding-top: 8em;
+	padding-bottom: 3em;
+	overflow-x: hidden;
+
+	.wrapper {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.heading {
+		@include heading;
+	}
+
+	.text {
+		@include text;
+		margin-top: 2em;
+		text-align: center;
+	}
+
+	.details {
+		margin-top: 3em;
+		color: $dark-gray;
+
+		.title {
+			font-weight: bold;
+			margin-bottom: 0.5em;
+		}
+
+		ul {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: start;
+			gap: 1em;
+			padding-left: 2.5em;
+		}
+	}
+
+	.checkIn_info {
+		position: relative;
+		width: 308px;
+		margin-top: 3em;
+		padding: 1em;
+		padding-top: 4em;
+		border-radius: 10px;
+		background-image: url('../../assets/img/paper_texture.png');
+		background-size: cover;
+		background-position: center;
+		box-shadow: -2px 2px 20px rgba(0, 0, 0, 0.3);
+		scale: 0.85;
+
+		.heading {
+			position: absolute;
+			left: -30px;
+			top: -30px;
+			display: flex;
+			flex-direction: column;
+
+			span {
+				font-size: 2.2rem;
+				color: $dark-brown;
+				text-transform: none;
+				letter-spacing: 3px;
+				font-weight: 900;
+				line-height: 30px;
+
+				&:nth-child(2) {
+					padding-left: 2em;
+				}
+			}
+		}
+	}
+}
+
+@media(min-width: 400px) {
+	.pricing{
+		.checkIn_info {
+			margin-top: 5em;
+			scale: 1;
+		}
+	}
+}
+
+@media(min-width: 768px) {
+	.pricing{
+		.checkIn_info {
+			width: fit-content;
+		}
+	}
+}

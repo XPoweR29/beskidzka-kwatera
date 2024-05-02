@@ -6,6 +6,7 @@ import { Nav } from './components/Nav/Nav';
 import { SectionOffer } from './components/SectionOffer/SectionOffer';
 import { SectionFacilities } from './components/SectionFacilities/SectionFacilities';
 import { SectionReview } from './components/SectionReview/SectionReview';
+import { SectionPricing } from './components/SectionPricing/SectionPricing';
 
 
 export const App = () => {
@@ -49,6 +50,7 @@ export const App = () => {
 			<SectionOffer/>
 			<SectionFacilities/>
 			<SectionReview/>
+			<SectionPricing/>
 		</AppContext.Provider>
 	);
 };

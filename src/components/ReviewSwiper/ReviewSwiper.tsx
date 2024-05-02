@@ -59,6 +59,8 @@ export const ReviewSwiper = ({ className }: Props) => {
 				</SwiperSlide>
 			))}
 
+			{/* //IMPROVE: utowrzyć komponent uniwersalny który przyjmuje referencje swipera.  */}
+
 			<div className={styles.swiperBtns}>
 				<div
 					className={styles.prev}
@@ -74,5 +76,4 @@ export const ReviewSwiper = ({ className }: Props) => {
 		</Swiper>
 	);
 };
-
-//NOTE: zacommitowac zmiant i wziąć się za kolejną sekcję. Przed rozpoczęciem podstron, zająć się przerobiemiem swipera. 
+ 

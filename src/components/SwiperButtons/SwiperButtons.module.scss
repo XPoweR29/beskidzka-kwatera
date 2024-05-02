@@ -1,0 +1,29 @@
+@import '../../sass/colors';
+
+.swiperBtns {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 2em;
+
+	.prev,
+	.next {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: transparent;
+		font-size: 3.5rem;
+		color: $main-orange;
+		filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.2));
+		cursor: pointer;
+		transition: opacity 0.2s, color 0.2s;
+		-webkit-tap-highlight-color: transparent; // specyficzne dla WebKit i Chrome
+		-moz-user-focus: none; // specyficzne dla Firefox
+
+		&.disabled {
+			color: $dark-brown;
+			opacity: 0.15;
+			cursor: auto;
+		}
+	}
+}
