@@ -7,6 +7,8 @@ import { SectionOffer } from './components/SectionOffer/SectionOffer';
 import { SectionFacilities } from './components/SectionFacilities/SectionFacilities';
 import { SectionReview } from './components/SectionReview/SectionReview';
 import { SectionPricing } from './components/SectionPricing/SectionPricing';
+import { ReachUs } from './components/ReachUs/ReachUs';
+import { Footer } from './components/Footer/Footer';
 
 
 export const App = () => {
@@ -51,6 +53,8 @@ export const App = () => {
 			<SectionFacilities/>
 			<SectionReview/>
 			<SectionPricing/>
+			<ReachUs/>
+			<Footer/>
 		</AppContext.Provider>
 	);
 };
