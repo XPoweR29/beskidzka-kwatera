@@ -7,9 +7,10 @@ import { Icon } from '@iconify/react/dist/iconify.js';
 interface Props {
     swiperRef: React.MutableRefObject<SwiperType|null>;
     className?: string;
+	disableControl?: boolean;
 }
 // otrzymywanie w propsie referencji swipera który ma być obsługiwany przez przyciski
-export const SwiperButtons = ({swiperRef, className}: Props) => {
+export const SwiperButtons = ({swiperRef, className, disableControl = true}: Props) => {
 	//OBSŁUGA AKTYWNYCH PRZYCISKÓW SWIPERA 
 	//zmienne dla stanów początku i końca swipera
 	const [slideStart, setSlideStart] = useState(true);
@@ -36,13 +37,13 @@ export const SwiperButtons = ({swiperRef, className}: Props) => {
 		<div className={`${styles.swiperBtns} ${className}`}>
 			<button
 				//nadanie klasy disabled w zależności od stanu swipera
-				className={`${styles.prev} ${slideStart?styles.disabled:''}`} 
+				className={`${styles.prev} ${disableControl&&slideStart?styles.disabled:''}`} 
 				// zdarzenie na klinięcie - zmiana slajdu dla referencji swipera. 
 				onClick={() => swiperRef.current?.slidePrev()}> 
 				<Icon icon='raphael:arrowleft' />
 			</button>
 			<button
-				className={`${styles.next} ${slideEnd?styles.disabled:''}`}
+				className={`${styles.next} ${disableControl&&slideEnd?styles.disabled:''}`}
 				onClick={() => swiperRef.current?.slideNext()}>
 				<Icon icon='raphael:arrowright' />
 			</button>

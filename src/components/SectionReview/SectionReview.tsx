@@ -3,6 +3,7 @@ import styles from './SectionReview.module.scss';
 import { ReviewSwiper } from '../ReviewSwiper/ReviewSwiper';
 
 export const SectionReview = () => {
+
     return (
 			<section className={styles.review}>
 				<Wrapper className={styles.wrapper}>

@@ -13,6 +13,7 @@ import bird_small from '../../assets/img/bird_small.png';
 import bird_big from '../../assets/img/bird_big.png';
 import { useContext, useRef } from 'react';
 import { AppContext } from '../../context/AppContext';
+import { SwiperButtons } from '../SwiperButtons/SwiperButtons';
 
 interface Props {
 	className?: string;
@@ -26,54 +27,41 @@ export interface UserReview {
 const reviews: UserReview[] = reviewData;
 
 export const ReviewSwiper = ({ className }: Props) => {
-	const {breakpoint} = useContext(AppContext)!;
+	const { breakpoint } = useContext(AppContext)!;
 	const swiperRef = useRef<SwiperClass | null>(null);
 
 	return (
-		<Swiper
-			className={`${styles.swiperContainer} ${className}`}
-			modules={[Autoplay, Navigation]}
-			spaceBetween={65} 
-			slidesPerView={breakpoint.xxl? 3: (breakpoint.lg?2:1)}
-			slidesPerGroup={1}
-			loop={true}
-			autoplay={{ delay: 3000, disableOnInteraction: false }}
-			onSwiper={(swiper) => (swiperRef.current = swiper)}>
+		<div className={styles.outterContainer}>
 			<img src={breakpoint.md?bird_big:bird_small} className={styles.birdImg} draggable='false'/>
+			<Swiper
+				className={`${styles.swiperContainer} ${className}`}
+				modules={[Autoplay, Navigation]}
+				spaceBetween={50}
+				slidesPerView={breakpoint.xxl ? 3 : breakpoint.lg ? 2 : 1}
+				slidesPerGroup={1}
+				loop={true}
+				autoplay={{ delay: 3000, disableOnInteraction: false }}
+				onSwiper={(swiper) => (swiperRef.current = swiper)}>
 
-			{reviews.map((rev, index) => (
-				<SwiperSlide key={index} className={styles.card}>
-					<div className={styles.container}>
-						<div className={styles.contentBox}>
-							<Icon icon='bi:quote' className={styles.quote1} />
-							<Icon icon='bi:quote' className={styles.quote2} />
-							<Rating rate={5} className={styles.rating} />
-							<p className={styles.comment}>{rev.review}</p>
+				{reviews.map((rev, index) => (
+					<SwiperSlide key={index} className={styles.card}>
+						<div className={styles.container}>
+							<div className={styles.contentBox}>
+								<Icon icon='bi:quote' className={styles.quote1} />
+								<Icon icon='bi:quote' className={styles.quote2} />
+								<Rating rate={5} className={styles.rating} />
+								<p className={styles.comment}>{rev.review}</p>
+							</div>
+
+							<div className={styles.userBox}>
+								<Icon icon='mingcute:user-4-fill' className={styles.icon} />
+								<p className={styles.username}>{rev.username}</p>
+							</div>
 						</div>
-
-						<div className={styles.userBox}>
-							<Icon icon='mingcute:user-4-fill' className={styles.icon} />
-							<p className={styles.username}>{rev.username}</p>
-						</div>
-					</div>
-				</SwiperSlide>
-			))}
-
-			{/* //IMPROVE: utowrzyć komponent uniwersalny który przyjmuje referencje swipera.  */}
-
-			<div className={styles.swiperBtns}>
-				<div
-					className={styles.prev}
-					onClick={() => swiperRef.current?.slidePrev()}>
-					<Icon icon='raphael:arrowleft' />
-				</div>
-				<div
-					className={styles.next}
-					onClick={() => swiperRef.current?.slideNext()}>
-					<Icon icon='raphael:arrowright' />
-				</div>
-			</div>
-		</Swiper>
+					</SwiperSlide>
+				))}
+			</Swiper>
+			<SwiperButtons className={styles.swiperButtons} swiperRef={swiperRef} disableControl={false}/>
+		</div>
 	);
 };
- 
