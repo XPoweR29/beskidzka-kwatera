@@ -6,6 +6,7 @@ import { Wrapper } from '../Wrapper/Wrapper';
 import { PricingSwiper } from '../PricingSwiper/PricingSwiper';
 import { PricingCards } from '../PricingCards/PricingCards';
 import { RegisterInfo } from '../RegisterInfo/RegisterInfo';
+import flowers from '../../assets/img/flowers_3.png';
 
 export const SectionPricing = () => {
 	const { setVisibleSection, breakpoint } = useContext(AppContext)!;
@@ -16,6 +17,7 @@ export const SectionPricing = () => {
 			className={styles.pricing}
 			onVisible={() => setVisibleSection('cennik')}>
 			<Wrapper className={styles.wrapper}>
+				<img src={flowers} className={styles.flowersImg}/>
 				<h2 className={styles.heading}>Cennik</h2>
 				<p className={styles.text}>
 					Zapraszamy do skorzystania z naszej wyjątkowej oferty pobytu w sercu

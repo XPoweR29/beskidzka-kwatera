@@ -2,15 +2,23 @@
 @import '../../sass/colors';
 
 .pricing {
-	padding-top: 8em;
+	padding-top: 5em;
 	padding-bottom: 3em;
 	overflow-x: hidden;
 
 	.wrapper {
+		position: relative;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+	}
+
+	.flowersImg {
+		position: absolute;
+		width: 180px;
+		left: 0;
+		top: 190px;
 	}
 
 	.heading {
@@ -78,8 +86,13 @@
 	}
 }
 
-@media(min-width: 400px) {
-	.pricing{
+@media (min-width: 400px) {
+	.pricing {
+		.flowersImg {
+			top: 250px;
+			width: 200px;
+		}
+
 		.checkIn_info {
 			margin-top: 5em;
 			scale: 1;
@@ -87,10 +100,43 @@
 	}
 }
 
-@media(min-width: 768px) {
-	.pricing{
+@media (min-width: 400px) {
+	.pricing {
+		.flowersImg {
+			top: 215px;
+			width: 200px;
+			left: 10px;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.pricing {
 		.checkIn_info {
 			width: fit-content;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.pricing {
+		.flowersImg {
+			top: 130px;
+			width: 250px;
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.pricing {
+		.flowersImg {
+			top: -30px;
+			width: 330px;
+			left: -30px;
+		}
+
+		.text {
+			width: 80%;
 		}
 	}
 }
