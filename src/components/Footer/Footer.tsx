@@ -1,19 +1,13 @@
 import { Wrapper } from '../Wrapper/Wrapper';
-import {useContext} from 'react';
 import styles from './Footer.module.scss';
-import blackWave_small from '../../assets/img/blackWave_small.png';
-import blackWave_large from '../../assets/img/blackWave.svg';
 import logo from '../../assets/img/logo_white.svg';
 import dev_logo from '../../assets/img/dev_logo.svg';
-import { AppContext } from '../../context/AppContext';
 
 export const Footer = () => {
-    const {breakpoint} = useContext(AppContext)!;
     const currentYear = new Date().getFullYear();
 
 	return (
 		<section id='footer' className={styles.footer}>
-			<img src={breakpoint.sm?blackWave_large:blackWave_small} className={styles.wave}  draggable='false'/>
 			<Wrapper className={styles.wrapper}>
 				<img src={logo} alt='logotyp' className={styles.logo} />
 

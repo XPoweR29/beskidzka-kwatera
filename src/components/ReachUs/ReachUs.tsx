@@ -5,6 +5,8 @@ import styles from './ReachUs.module.scss';
 import { AppContext } from '../../context/AppContext';
 import road_small from '../../assets/img/road_small.png';
 import road_large from '../../assets/img/road_large.png';
+import wave_small from '../../assets/img/blackWave_small.svg';
+import wave_large from '../../assets/img/blackWave.svg';
 
 export const ReachUs = () => {
 	const { breakpoint, setVisibleSection } = useContext(AppContext)!;
@@ -14,6 +16,7 @@ export const ReachUs = () => {
 			id='dojazd'
 			className={styles.reachUs}
 			onVisible={() => setVisibleSection('dojazd')}>
+				<img src={breakpoint.md?wave_large:wave_small}  className={styles.wave}/>
 			<Wrapper className={styles.wrapper}>
 				<img
 					src={breakpoint.md ? road_large : road_small}
