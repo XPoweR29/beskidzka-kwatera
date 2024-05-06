@@ -1,5 +1,20 @@
 @import '../../sass/colors';
 
+.outterContainer {
+	position: relative;
+
+	.swiperButtons {
+		margin-top: 5em;
+	}
+
+	.birdImg {
+		position: absolute;
+		top: -100px;
+		right: -35px;
+		width: 300px;
+	}
+}
+
 .swiperContainer {
 	position: relative;
 	height: 300px;
@@ -7,33 +22,6 @@
 
 	&:global(.swiper) {
 		overflow: visible;
-	}
-
-	.birdImg {
-		position: absolute;
-		top: -35%;
-		right: -15%;
-		width: 280px;
-	}
-
-	.swiperBtns {
-		position: absolute;
-		bottom: -6em;
-		left: 50%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		gap: 2em;
-		transform: translateX(-50%);
-		color: $main-orange;
-
-		.prev,
-		.next {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			font-size: 3.5rem;
-		}
 	}
 
 	.card {
@@ -144,35 +132,33 @@
 }
 
 @media (min-width: 400px) {
-	.swiperContainer {
+	.outterContainer {
 		.birdImg {
-			top: -40%;
-			right: -10%;
-			width: 320px;
+			top: -120px;
+			right: -35px;
+			width: 350px;
 		}
 	}
 }
 
 @media (min-width: 576px) {
-	.swiperContainer {
+	.outterContainer {
 		.birdImg {
-			top: -43%;
-			right: -7%;
-			width: 370px;
+			right: -40px;
+			width: 400px;
 		}
 	}
 }
 
 @media (min-width: 768px) {
-	.swiperContainer {
+	.outterContainer {
 		.birdImg {
-			top: -45%;
-			right: 10%;
-			width: 400px;
+			right: 60px;
 		}
 
 		.swiperBtns {
-			.prev, .next {
+			.prev,
+			.next {
 				font-size: 5rem;
 			}
 		}
@@ -180,23 +166,34 @@
 }
 
 @media (min-width: 992px) {
-	.swiperContainer {
+	.outterContainer {
 		.birdImg {
-			top: -75%;
-			right: -10%;
-			width: 600px;
+			top: -215px;
+			right: -30px;
+			width: 550px;
+		}
+	}
+
+	.swiperContainer {
+
+		&:global(.swiper) {
+			padding: 0 1em;
+			overflow: hidden;
 		}
 	}
 }
 
 @media (min-width: 1200px) {
-	.swiperContainer {
+	.outterContainer {
 		.birdImg {
-			right: -5%;
+			top: -230px;
+			right: -50px;
+			width: 600px;
 		}
+	}
 
+	.swiperContainer {
 		.card {
-			
 			.container {
 				max-width: none;
 			}
