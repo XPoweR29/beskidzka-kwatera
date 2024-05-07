@@ -13,10 +13,12 @@ export const Footer = () => {
 
 				<div className={`${styles.item} ${styles['item--address']}`}>
 					<h4 className={styles.title}>Beskidzka Kwatera</h4>
-					<a href='https://www.google.pl/maps/place/Zielona+136,+34-350+W%C4%99gierska+G%C3%B3rka/@49.6111857,19.1192718,17z/data=!4m6!3m5!1s0x4714256d2a44caa1:0x2a68da1afa9e819b!8m2!3d49.6116897!4d19.1208489!16s%2Fg%2F11f5dgc8j4?entry=ttu'>
+					<a href='https://www.google.com/maps/?q=Węgierska+Górka+ul+Zielona+136'>
 						ul. Zielona 136, 34-350 Węgierska Górka
 					</a>
-					<a href='mailto:kontakt@beskidzkakwatera.pl'>Email: kontak@beskidzkakwatera.pl</a>
+					<a href='mailto:kontakt@beskidzkakwatera.pl'>
+						Email: kontak@beskidzkakwatera.pl
+					</a>
 					<a href='tel:+48123456789'>Tel: +48 123 456 789</a>
 				</div>
 
@@ -29,15 +31,18 @@ export const Footer = () => {
 
 				<div className={`${styles.item} ${styles['item--info']}`}>
 					<p>© {currentYear} Beskidzka Kwatera</p>
-                    <p>Wszelkie prawa zastrzeżone</p>
-                    <span>
-                        <a href="#">Polilstyka prywatności</a> | <a href="#">Regulamin</a>
-                    </span>
+					<p>Wszelkie prawa zastrzeżone</p>
+					<span>
+						<a href='#'>Polilstyka prywatności</a> | <a href='#'>Regulamin</a>
+					</span>
 				</div>
 
-                <div className={styles.footer__signature}>
+				<div className={styles.footer__signature}>
 					<p>Designed & Developed by</p>
-					<a href='https://webcraft-studio.pl/' target='_blank' rel='noopener noreferrer'>
+					<a
+						href='https://webcraft-studio.pl/'
+						target='_blank'
+						rel='noopener noreferrer'>
 						<img src={dev_logo} />
 					</a>
 				</div>

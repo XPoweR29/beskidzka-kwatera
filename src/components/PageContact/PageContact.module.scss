@@ -1,0 +1,155 @@
+@import '../../sass/colors';
+@import '../../sass/mixins';
+
+.contact {
+	position: relative;
+	padding-top: 10em;
+	padding-bottom: 8em;
+	overflow: clip;
+
+	.wrapper {
+		position: relative;
+	}
+
+	.background_wave {
+		position: absolute;
+		top: 200px;
+		left: 0;
+		width: 110%;
+		z-index: -1;
+	}
+
+	.heading {
+		@include heading;
+	}
+
+	.text {
+		@include text;
+		margin-top: 2em;
+	}
+
+	.info {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: start;
+		margin-top: 3em;
+		gap: 1.7em;
+
+		&__item {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 1em;
+			cursor: pointer;
+
+			a {
+
+				@include link;
+				&::before {
+					width: 0px;
+					left: 0;
+					transform: translateX(0);
+					transform-origin: 0px 0px;
+					transition: width 0.2s;
+				}
+
+				&:hover {
+					&::before {
+						width: 100%;
+					}
+				}
+			}
+		}
+
+		.icon {
+			font-size: 3rem;
+			color: $main-orange;
+		}
+
+		.map {
+			height: 280px;
+			width: 100%;
+			margin-top: 2em;
+			border: 1px solid lightgray;
+			border-radius: 10px;
+			box-shadow: -2px 2px 20px rgba(0, 0, 0, 0.3);
+		}
+	}
+
+	&__form {
+		margin-top: 3em;
+	}
+
+	.wave {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+	}
+}
+
+@media (min-width: 430px) {
+	.contact {
+		.background_wave {
+			top: 40px;
+			width: 100%;
+		}
+	}
+}
+
+@media (min-width: 576px) {
+	.contact {
+		padding-bottom: 10em;
+
+		.background_wave {
+			width: 90%;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.contact {
+		.background_wave {
+			top: -300px;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.contact {
+		.background_wave {
+			top: -350px;
+			width: 85%;
+		}
+
+		.info-map_container {
+			display: flex;
+			gap: 5em;
+		}
+
+		.info {
+			width: 50%;
+		}
+
+		&__form {
+			width: 40%;
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.contact {
+		padding-bottom: 12em;
+
+		.background_wave {
+			top: -400px;
+			left: 80px;
+			width: 75%;
+		}
+
+		.info-map_container {
+			gap: 7em;
+		}
+	}
+}

@@ -1,5 +1,21 @@
 @import './colors';
 
+@mixin mainBtn {
+	padding: 1em 0.5em;
+	font-weight: bold;
+	color: $main-orange;
+	border: 2px solid $main-orange;
+	border-radius: 10px;
+	background-color: #fff;
+	transition: background-color 0.4s, color 0.4s, scale 0.3s;
+
+	&:hover {
+		background-color: $main-orange;
+		color: $dark-brown;
+		scale: 0.95;
+	}
+}
+
 @mixin shadow {
 	box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
 }
