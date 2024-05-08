@@ -9,6 +9,8 @@ import { SectionReview } from './components/SectionReview/SectionReview';
 import { SectionPricing } from './components/SectionPricing/SectionPricing';
 import { ReachUs } from './components/ReachUs/ReachUs';
 import { Footer } from './components/Footer/Footer';
+import { PageContact } from './components/PageContact/PageContact';
+import { Toaster } from 'react-hot-toast';
 
 
 export const App = () => {
@@ -48,13 +50,17 @@ export const App = () => {
 	return (
 		<AppContext.Provider value={contextValues}>
 			<Nav />
-			<SectionHome />
+
+			{/* <SectionHome />
 			<SectionOffer/>
 			<SectionFacilities/>
 			<SectionReview/>
 			<SectionPricing/>
 			<ReachUs/>
-			<Footer/>
+			<Footer/> */}
+
+			<PageContact/>
+			<Toaster toastOptions={{className: 'toaster'}}/>
 		</AppContext.Provider>
 	);
 };

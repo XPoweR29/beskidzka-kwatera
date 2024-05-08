@@ -10,4 +10,12 @@ body {
 	@media(min-width: 400px) {
 		font-size: 1.6rem;
 	}
+
+	.toaster {
+		border: 2px solid $main-orange;
+
+		.go2344853693 {
+			background-color: $main-orange;
+		}
+	}
 }

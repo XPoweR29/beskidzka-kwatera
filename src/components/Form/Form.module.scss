@@ -7,9 +7,24 @@
 	justify-content: center;
 	align-items: center;
 
+	.input_container {
+		width: 100%;
+
+		.error {
+			min-height: 1.471em;
+			color: red;
+			font-size: 0.85em;
+			visibility: hidden;
+
+			&--active {
+				visibility: visible;
+			}
+		}
+	}
+
 	&__input {
 		width: 100%;
-		margin: 1em auto;
+		margin-top: 0.5em;
 		padding: 1em;
 		border: 1px solid lightgray;
 		border-radius: 10px;
