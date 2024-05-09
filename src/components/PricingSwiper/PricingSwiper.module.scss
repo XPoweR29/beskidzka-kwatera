@@ -7,6 +7,10 @@
 	width: 230px;
 	margin-top: 6em;
 	background-color: transparent;
+	
+	&:global(.swiper) {
+		overflow: visible;
+	}
 
 	&__card {
 		width: 100%;

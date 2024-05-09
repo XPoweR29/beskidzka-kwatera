@@ -25,7 +25,7 @@ export const SectionHome = () => {
 					Witaj w Beskidzkiej Kwaterze — Twoim mijescu z dala od domu. Odkryj przestrzeń stowrzoną dla Twojego komfortu i relaksu. Poczuj harmonię z otaczającą naturą i ciesz się naszą gościnnością przez cały rok.
 				</p>
 
-				<a href='#pricing' className={styles.ctaBtn}>
+				<a href='#cennik' className={styles.ctaBtn}>
 					Zarezerwuj teraz!
 				</a>
 

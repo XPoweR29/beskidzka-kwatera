@@ -1,17 +1,9 @@
 import { useEffect, useState } from 'react';
 import './index.scss';
 import { AppContext } from './context/AppContext';
-import { SectionHome } from './components/SectionHome/HomeSection';
-import { Nav } from './components/Nav/Nav';
-import { SectionOffer } from './components/SectionOffer/SectionOffer';
-import { SectionFacilities } from './components/SectionFacilities/SectionFacilities';
-import { SectionReview } from './components/SectionReview/SectionReview';
-import { SectionPricing } from './components/SectionPricing/SectionPricing';
-import { ReachUs } from './components/ReachUs/ReachUs';
-import { Footer } from './components/Footer/Footer';
-import { PageContact } from './components/PageContact/PageContact';
 import { Toaster } from 'react-hot-toast';
-
+import { Nav } from './components/Nav/Nav';
+import { Outlet } from 'react-router-dom';
 
 export const App = () => {
 	const [visibleSection, setVisibleSection] = useState<string>('');
@@ -43,24 +35,17 @@ export const App = () => {
 
 	const contextValues = {
 		breakpoint,
-		mobileMenuShown, setMobileMenuShown,
-		visibleSection, setVisibleSection,
+		mobileMenuShown,
+		setMobileMenuShown,
+		visibleSection,
+		setVisibleSection,
 	};
 
 	return (
 		<AppContext.Provider value={contextValues}>
-			<Nav />
-
-			{/* <SectionHome />
-			<SectionOffer/>
-			<SectionFacilities/>
-			<SectionReview/>
-			<SectionPricing/>
-			<ReachUs/>
-			<Footer/> */}
-
-			<PageContact/>
-			<Toaster toastOptions={{className: 'toaster'}}/>
+				<Nav />
+				<Outlet/>
+			<Toaster toastOptions={{ className: 'toaster' }} />
 		</AppContext.Provider>
 	);
 };

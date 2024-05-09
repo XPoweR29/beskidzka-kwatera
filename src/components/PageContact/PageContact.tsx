@@ -8,13 +8,14 @@ import { Footer } from '../Footer/Footer';
 import { useContext } from 'react';
 import { AppContext } from '../../context/AppContext';
 import bg_wave from '../../assets/img/bg_wave.svg';
+import { ScrollSpySection } from '../ScrollSpySection/ScrollSpySection';
 
 export const PageContact = () => {
-	const { breakpoint } = useContext(AppContext)!;
+	const { breakpoint, setVisibleSection } = useContext(AppContext)!;
 
 	return (
 		<>
-			<section id='kontakt' className={styles.contact}>
+			<ScrollSpySection id='kontakt' className={styles.contact} onVisible={()=>setVisibleSection('kontakt')}>
 				<Wrapper className={styles.wrapper}>
 					<img src={bg_wave} className={styles.background_wave} />
 					<h1 className={styles.heading}>Skontaktuj się z nami</h1>
@@ -65,7 +66,7 @@ export const PageContact = () => {
 					src={breakpoint.md ? wave__large : wave__small}
 					className={styles.wave}
 				/>
-			</section>
+			</ScrollSpySection>
 
 			<Footer />
 		</>

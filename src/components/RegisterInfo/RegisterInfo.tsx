@@ -15,7 +15,7 @@ export const RegisterInfo = () => {
 				</div>
 				<p className={styles.text}>
 					Masz pytania lub chcesz złożyć rezerwację? <br />
-					<a href='#'>Skontaktuj się z nami</a> aby doasować pobyt do Twoich
+					<a href='/kontakt'>Skontaktuj się z nami</a> aby doasować pobyt do Twoich
 					oczekiwań.
 				</p>
 			</div>

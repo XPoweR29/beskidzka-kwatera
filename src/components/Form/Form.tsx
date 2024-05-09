@@ -21,8 +21,6 @@ const initialFormState: FormState = {
 	message: '',
 };
 
-//TODO: Nowe konto gmail jako 'nadawca' dla formularza lub uzycie Firebase&Nodemailer 
-
 export const Form = ({ className }: Props) => {
 	const [formState, setFormState] = useState<FormState>(initialFormState);
 	const [errors, setErrors] = useState<{ [key in keyof FormState]?: string }>({});
