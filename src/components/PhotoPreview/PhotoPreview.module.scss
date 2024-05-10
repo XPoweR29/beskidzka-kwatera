@@ -1,0 +1,94 @@
+@import '../../sass/animations';
+@import '../../sass/colors';
+
+.preview {
+	position: fixed;
+	width: 100vw;
+	height: 101vh;
+	min-width: 320px;
+	top: 50%;
+	left: 50%;
+	translate: -50% -50%;
+	background-color: rgba(0, 0, 0, 0.7);
+	backdrop-filter: blur(2px);
+	z-index: 101;
+	animation: fadeIn 0.7s forwards;
+
+	.wrapper {
+		position: relative;
+	}
+
+	.closeBtn {
+		position: absolute;
+		display: flex;
+		top: 30px;
+		right: 30px;
+		background: none;
+		color: whitesmoke;
+		font-size: 4rem;
+		scale: 1;
+		transition: scale 0.3s;
+		z-index: 10;
+
+		&:hover {
+			scale: 1.05;
+		}
+	}
+
+	.photoSwiper {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		translate: -50% -50%;
+		width: 90%;
+		height: 80%;
+
+		.photo {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100%;
+
+			img {
+				max-height: 85%;
+				max-width: 100%;
+				object-fit: contain;
+				border-radius: 10px;
+				border: 1px solid lightgray;
+			}
+		}
+
+		:global(.swiper-button-next),
+		:global(.swiper-button-prev) {
+			width: 50px;
+			height: 50px;
+			text-align: center;
+			color: whitesmoke;
+			display: none;
+		}
+
+		:global(.swiper-pagination-bullet) {
+			height: 12px;
+			width: 12px;
+			opacity: 0.3;
+			background: white;
+		}
+
+		:global(.swiper-pagination-bullet-active) {
+			// border: 1px solid whitesmoke;
+			background-color: $main-orange;
+			opacity: 1;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.preview {
+		.photoSwiper {
+			:global(.swiper-button-next),
+			:global(.swiper-button-prev) {
+				display: block;
+			}
+		}
+	}
+}

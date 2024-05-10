@@ -9,10 +9,13 @@ import bg_wave from '../../assets/img/bg_wave.svg';
 import wave_small from '../../assets/img/blackWave_small.svg';
 import wave_large from '../../assets/img/blackWave.svg';
 import { Footer } from '../Footer/Footer';
+import { PhotoPreview } from '../PhotoPreview/PhotoPreview';
 
 export const PageGallery = () => {
 	const { setVisibleSection, breakpoint } = useContext(AppContext)!;
 	const [photos, setPhotos] = useState<string[]>([]);
+	const [clickedImg, setClickedImg] = useState<string|null>(null);
+	const [previewShown, setPreviewShown] = useState<boolean>(false);
 
 	useEffect(() => {
 		const loadPhotos = async () => {
@@ -29,6 +32,11 @@ export const PageGallery = () => {
 		};
 		loadPhotos();
 	}, []);
+
+	const previewHandler = (photoSrc: string) => {
+		setClickedImg(photoSrc);
+		setPreviewShown(true);
+	};
 
 	return (
 		<>
@@ -57,13 +65,15 @@ export const PageGallery = () => {
 					<div className={styles.container}>
 						{photos.map((photo, i) => {
 							return (
-								<div className={styles.thumbnail} key={i}>
+								<div className={styles.thumbnail} key={i} onClick={()=>previewHandler(photo)}>
 									<img src={photo} alt='Zdjęcie obiektu' />
 								</div>
 							);
 						})}
 					</div>
 				</Wrapper>
+
+				{previewShown&&clickedImg&& <PhotoPreview photos={photos} isPreviewShown={setPreviewShown} clickedImg={clickedImg}/>}
 				<img src={breakpoint.lg?wave_large:wave_small} className={styles.wave} />
 			</ScrollSpySection>
             <Footer/>
