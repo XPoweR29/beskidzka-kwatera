@@ -14,6 +14,7 @@ export const menuLinks: menuLink[] = [
 	{ name: 'Oferta', href: '#oferta', id: 'oferta' },
 	{ name: 'Atrakcje', href: '#atrakcje', id: 'atrakcje' },
 	{ name: 'Udogodnienia', href: '#udogodnienia', id: 'udogodnienia' },
+	{ name: 'Galeria', href: '/galeria', id: 'galeria' },
 	{ name: 'Kontakt', href: '/kontakt', id: 'kontakt' },
 ];
 

@@ -13,11 +13,15 @@ const router = createBrowserRouter([
         children: [
             {
                 index: true,
-                element: <PageGallery/>
+                element: <PageHome/>
             },
             {
                 path: 'kontakt',
                 element: <PageContact/>
+            }, 
+            {
+                path: 'galeria',
+                element: <PageGallery/>
             }
         ]
     }
