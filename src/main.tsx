@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { PageHome } from './components/PageHome/PageHome';
 import { PageContact } from './components/PageContact/PageContact';
 import { PageGallery } from './components/PageGallery/PageGallery';
+import { PageAttractions } from './components/PageAttractions/PageAttractions';
 
 const router = createBrowserRouter([
     {
@@ -13,7 +14,7 @@ const router = createBrowserRouter([
         children: [
             {
                 index: true,
-                element: <PageHome/>
+                element: <PageAttractions/>
             },
             {
                 path: 'kontakt',

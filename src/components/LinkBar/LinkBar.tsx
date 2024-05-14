@@ -12,9 +12,9 @@ interface menuLink {
 export const menuLinks: menuLink[] = [
 	{ name: 'Start', href: '/', id: 'home' },
 	{ name: 'Oferta', href: '#oferta', id: 'oferta' },
-	{ name: 'Atrakcje', href: '#atrakcje', id: 'atrakcje' },
 	{ name: 'Udogodnienia', href: '#udogodnienia', id: 'udogodnienia' },
 	{ name: 'Galeria', href: '/galeria', id: 'galeria' },
+	{ name: 'Atrakcje', href: '#atrakcje', id: 'atrakcje' },
 	{ name: 'Kontakt', href: '/kontakt', id: 'kontakt' },
 ];
 

@@ -1,0 +1,310 @@
+@import '../../sass/colors';
+@import '../../sass/mixins';
+
+.attractions {
+	position: relative;
+	padding-bottom: 10em;
+	overflow-x: clip;
+
+	.header {
+		position: relative;
+		height: 100svh;
+		background-image: url('../../assets/photos/beskid_zywiecki.webp');
+		background-position-x: 50%;
+		background-size: cover;
+		z-index: 0;
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.5);
+		}
+
+		&__wrapper {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			z-index: 1;
+		}
+
+		&__title {
+			@include heading;
+			text-align: center;
+			font-weight: 700;
+			font-size: 2em;
+			color: white;
+		}
+
+		.divider {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			gap: 0.7em;
+
+			.line {
+				display: block;
+				height: 1px;
+				width: 30%;
+				background-color: #aeaeae;
+				border-radius: 5px;
+				opacity: 1;
+			}
+
+			img {
+				width: 20px;
+				opacity: 1;
+			}
+		}
+
+		.whiteWave {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			z-index: 1;
+		}
+	}
+
+	.background_wave {
+		position: absolute;
+		bottom: 80px;
+		left: -90px;
+		width: 550px;
+		rotate: 9deg;
+		z-index: -1;
+
+		&--2 {
+			bottom: auto;
+			top: 20%;
+			left: -90px;
+			width: 550px;
+			rotate: 9deg;
+			transform: rotateY(180deg);
+		}
+	}
+
+	&__text {
+		@include text;
+		margin-top: 2em;
+		text-align: justify;
+	}
+
+	.attractionContainer {
+		margin-top: 5em;
+	}
+
+	.attraction {
+		position: relative;
+
+		.folk_sign_big {
+			position: absolute;
+			width: 230px;
+			right: -120px;
+			top: -30px;
+		}
+
+		.butterfly {
+			position: absolute;
+			width: 110px;
+			left: 30px;
+			top: 125px;
+			z-index: -1;
+		}
+
+		&__photo {
+			position: relative;
+			margin: 0 auto;
+			margin-top: 3em;
+			max-width: 300px;
+
+			img {
+				position: absolute;
+				border: 1px solid lightgray;
+				border-radius: 10px;
+				box-shadow: -2px 2px 20px rgba(0, 0, 0, 0.3);
+
+				&:nth-child(1) {
+					width: 75%;
+					top: 0;
+					left: 0;
+				}
+
+				&:nth-child(2) {
+					width: 55%;
+					top: 90px;
+					right: 0px;
+				}
+			}
+
+			&--v2 {
+				border: 1px solid transparent;
+				margin-bottom: 5em;
+
+				img {
+					&:nth-child(1) {
+						width: 50%;
+						top: 0;
+						left: 0;
+						z-index: 1;
+					}
+
+					&:nth-child(2) {
+						width: 40%;
+						top: 103px;
+						right: 45px;
+						z-index: 0;
+						rotate: 380deg;
+					}
+				}
+			}
+
+			&--v3 {
+				border: 1px solid transparent;
+				margin-bottom: 1em;
+				img {
+					&:nth-child(1) {
+						width: 75%;
+						top: 0;
+						left: auto;
+						right: 0;
+					}
+
+					&:nth-child(2) {
+						width: 55%;
+						top: 90px;
+						left: 0px;
+					}
+				}
+			}
+		}
+
+		&__brief {
+			padding-top: 15em;
+		}
+
+		&__heading {
+			@include link;
+			font-size: 1.15em;
+			max-width: fit-content;
+		}
+
+		&__text {
+			@include text;
+			position: relative;
+			margin-top: 1em;
+		}
+	}
+
+	.wave {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+	}
+}
+
+@media (min-width: 576px) {
+	.attractions {
+		.attraction {
+			.butterfly {
+				width: 215px;
+				width: 215px;
+				left: -40px;
+				top: 65px;
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.attractions {
+		.attraction {
+			&__photo {
+				max-width: 350px;
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.attractions {
+		.header {
+			.divider {
+				width: 50%;
+			}
+		}
+
+		&__text {
+			width: 80%;
+			text-align: center;
+			margin: 0 auto;
+		}
+
+		.background_wave {
+			left: 100px;
+			&--2 {
+				top: 25%;
+				left: 150px;
+			}
+		}
+
+		.attraction {
+			display: flex;
+			gap: 3em;
+
+			.butterfly {
+				width: 240px;
+				left: 80px;
+				top: 5px;
+			}
+
+			&__photo {
+				width: 30%;
+				margin: auto 0;
+			}
+
+			&__brief {
+				padding-top: 10em;
+				width: 65%;
+			}
+		}
+
+		.animated {
+			&:first-of-type {
+				.attraction {
+
+					&__brief {
+						padding-top: 3em;
+					}
+				}
+			}
+
+			&:nth-child(even) {
+				.attraction {
+					flex-direction: row-reverse;
+
+					&__heading {
+						margin-left: auto;
+					}
+
+					&__text {
+						text-align: right;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.attractions {
+		padding-bottom: 15em;
+	}
+}
