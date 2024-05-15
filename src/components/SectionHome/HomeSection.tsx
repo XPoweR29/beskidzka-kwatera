@@ -13,7 +13,7 @@ export const SectionHome = () => {
 
 	return (
 
-		<ScrollSpySection className={styles.home} id='home' onVisible={()=>setVisibleSection('home')}>
+		<ScrollSpySection className={styles.home} id='home' onVisible={()=>setVisibleSection('start')}>
 			<img src={flowers} className={styles.flowers_img} />
 			<img src={breakpoint.lg ? vector_large : vector_small} className={styles.home_img} />
 
