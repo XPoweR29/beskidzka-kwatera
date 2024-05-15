@@ -14,7 +14,7 @@ const router = createBrowserRouter([
         children: [
             {
                 index: true,
-                element: <PageAttractions/>
+                element: <PageHome/>
             },
             {
                 path: 'kontakt',
@@ -23,6 +23,10 @@ const router = createBrowserRouter([
             {
                 path: 'galeria',
                 element: <PageGallery/>
+            },
+            {
+                path: 'atrakcje',
+                element: <PageAttractions/>
             }
         ]
     }

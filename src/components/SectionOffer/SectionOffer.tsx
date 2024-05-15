@@ -40,7 +40,7 @@ export const SectionOffer = () => {
 					.
 				</p>
 				<div className={styles.sectionImg}>
-					<a href='#' className={styles.link}>
+					<a href='/galeria' className={styles.link}>
 						Zobacz więcej
 						<Icon icon='tdesign:arrow-right' className={styles.arrow}/>
 					</a>

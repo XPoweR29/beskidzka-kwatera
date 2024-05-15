@@ -225,6 +225,12 @@
 
 @media (min-width: 768px) {
 	.attractions {
+		.header {
+			&__title {
+				font-size: 2.5em;
+			}
+		}
+
 		.attraction {
 			&__photo {
 				max-width: 350px;
@@ -279,7 +285,6 @@
 		.animated {
 			&:first-of-type {
 				.attraction {
-
 					&__brief {
 						padding-top: 3em;
 					}

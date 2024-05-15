@@ -47,9 +47,7 @@ export const PageAttractions = () => {
 	return (
 		<>
 			<ScrollSpySection
-				className={styles.attractions}
-				id='atrakcje'
-				onVisible={() => setVisibleSection('atrakcje')}>
+				className={styles.attractions} id='atrakcje' onVisible={()=>setVisibleSection('atrakcje')}>
 				<header
 					className={styles.header}
 					ref={heroRef}
@@ -63,7 +61,7 @@ export const PageAttractions = () => {
 						</div>
 					</Wrapper>
 					<img
-						src={breakpoint.lg?whiteWave_large:whiteWave_small}
+						src={breakpoint.lg ? whiteWave_large : whiteWave_small}
 						className={styles.whiteWave}
 						draggable='false'
 					/>
@@ -268,3 +266,8 @@ export const PageAttractions = () => {
 		</>
 	);
 };
+
+
+//FIXME: Nie działa ustawienie visible section na "atrakcje", jest to spowodowane prawodpodobnie komponentem AnimeContent. podejżewam że chodzi o motion framer. Trzeba sprawdzić z chatGPT. 
+
+//TODO: Przeglądnąc jeszcze stronę, czy trzeb coś poprawić lub czegoś brakuje. Następnie poprawić linki. Wziąć sie za popup z danymi do przelewu. Jeśli to bedzie zrobione to sprawdzić jeszcze RWD i wykonywać taski z trello.  
