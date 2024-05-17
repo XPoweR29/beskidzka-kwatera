@@ -1,19 +1,20 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-
 interface Props {
-	direction: 'left' | 'right' | 'bottom';
+	direction?: 'left' | 'right' | 'bottom';
 	children: React.ReactNode;
     delay?: number;
     duration?: number;
     className?: string;
 }
 
-export const AnimeContent = ({ direction="left", children, delay=0, duration=1, className }: Props) => {
-    const { ref, inView } = useInView({
+export const AnimeContent = ({ direction="left", children, delay=0, duration=1, className}: Props) => {
+    const { ref, inView} = useInView({
         triggerOnce: true,
 		rootMargin: '-200px 0px',
 	});
+    
+
     
     const variants = {
         hidden: { opacity: 0, x: direction === 'left' ? -100 : 100 },

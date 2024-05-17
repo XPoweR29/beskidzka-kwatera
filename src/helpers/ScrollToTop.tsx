@@ -6,7 +6,6 @@ export const ScrollToTop = (): null => {
 
 	useLayoutEffect(() => {
 		window.scrollTo(0, 0);
-		console.log('skroltop!')
 	}, [pathname]);
 
 	return null;

@@ -14,9 +14,9 @@ export const menuLinks: menuLink[] = [
 	{ name: 'Start', href: '/', id: 'start' },
 	{ name: 'Oferta', href: '/#oferta', id: 'oferta' },
 	{ name: 'Udogodnienia', href: '/#udogodnienia', id: 'udogodnienia' },
+	{ name: 'Cennik', href: '/#cennik', id: 'cennik' },
 	{ name: 'Galeria', href: '/galeria', id: 'galeria' },
 	{ name: 'Atrakcje', href: '/atrakcje', id: 'atrakcje' },
-	{ name: 'Cennik', href: '/#cennik', id: 'cennik' },
 	{ name: 'Kontakt', href: '/kontakt', id: 'kontakt' },
 ];
 
@@ -53,8 +53,6 @@ export const LinkBar = () => {
 	);
 };
 
-//FIXME: Naprawić działanie linku Start oraz zadbać o to aby po klinięciu w inne podstrony, nie były one przescrollowane tak samo jak strona startowa. 
 
-//FIXME: Naprawić działanie scrollSpy. 
 
 //TODO: Przeglądnąc jeszcze stronę, czy trzeb coś poprawić lub czegoś brakuje. Następnie poprawić linki. Wziąć sie za popup z danymi do przelewu. Jeśli to bedzie zrobione to sprawdzić jeszcze RWD i wykonywać taski z trello.  

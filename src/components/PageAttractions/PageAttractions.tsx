@@ -41,13 +41,16 @@ export const PageAttractions = () => {
 		};
 
 		window.addEventListener('scroll', handleScroll);
+		setVisibleSection('atrakcje');
 		return () => window.removeEventListener('scroll', handleScroll);
 	}, []);
 
 	return (
 		<>
 			<ScrollSpySection
-				className={styles.attractions} id='atrakcje' onVisible={()=>setVisibleSection('atrakcje')}>
+				className={styles.attractions}
+				id='atrakcje'
+				onVisible={() => setVisibleSection('atrakcje')}>
 				<header
 					className={styles.header}
 					ref={heroRef}
@@ -266,5 +269,3 @@ export const PageAttractions = () => {
 		</>
 	);
 };
-
-
