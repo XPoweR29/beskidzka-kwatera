@@ -24,9 +24,9 @@ export const Footer = () => {
 
 				<div className={`${styles.item} ${styles['item--links']}`}>
 					<h4 className={styles.title}>Zobacz również</h4>
-					<a href='#'>galeria obiektu</a>
-					<a href='#'>lokalne atrakcje</a>
-					<a href='#'>informacje kontaktowe</a>
+					<a href='/galeria'>galeria obiektu</a>
+					<a href='/atrakcje'>lokalne atrakcje</a>
+					<a href='/kontakt'>informacje kontaktowe</a>
 				</div>
 
 				<div className={`${styles.item} ${styles['item--info']}`}>
