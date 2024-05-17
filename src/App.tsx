@@ -4,6 +4,7 @@ import { AppContext } from './context/AppContext';
 import { Toaster } from 'react-hot-toast';
 import { Nav } from './components/Nav/Nav';
 import { Outlet } from 'react-router-dom';
+import { ScrollToTop } from './helpers/ScrollToTop';
 
 export const App = () => {
 	const [visibleSection, setVisibleSection] = useState<string>('');
@@ -27,6 +28,7 @@ export const App = () => {
 			});
 		};
 		window.addEventListener('resize', handleResize);
+		window.history.scrollRestoration = 'manual';
 
 		return () => {
 			window.removeEventListener('resize', handleResize);
@@ -44,6 +46,7 @@ export const App = () => {
 	return (
 		<AppContext.Provider value={contextValues}>
 				<Nav />
+				<ScrollToTop/>
 				<Outlet/>
 			<Toaster toastOptions={{ className: 'toaster' }} />
 		</AppContext.Provider>
