@@ -17,7 +17,7 @@ export const AnimeContent = ({ direction="left", children, delay=0, duration=1, 
 
     
     const variants = {
-        hidden: { opacity: 0, x: direction === 'left' ? -100 : 100 },
+        hidden: { opacity: 0, x: direction === 'left' ? -100 : 100,},
         visible: { opacity: 1, x: 0 },
     };
     

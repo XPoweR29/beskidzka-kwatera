@@ -43,3 +43,14 @@
 		opacity: 1;
 	}
 }
+
+@keyframes fadeInFromTop {
+	from {
+		transform: translateY(-50px);
+		opacity: 0;
+	}
+	to {
+		transform: translate(0px);
+		opacity: 1;
+	}
+}

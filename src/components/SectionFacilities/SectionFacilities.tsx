@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import { ScrollSpySection } from '../ScrollSpySection/ScrollSpySection';
 import styles from './SectionFacilities.module.scss';
 import { AppContext } from '../../context/AppContext';
@@ -9,6 +9,7 @@ import grayWave_big from '../../assets/img/grayWave.svg';
 import whiteWave_big from '../../assets/img/whiteWave.svg';
 import folk_sign from '../../assets/img/folkSign_small.svg';
 import { FacilityItem } from '../FacilityItem/FacilityItem';
+import { useInView } from 'react-intersection-observer';
 
 interface FacilityItem {
 	icon: string;
@@ -28,6 +29,11 @@ const facilities: FacilityItem[] = [
 
 export const SectionFacilities = () => {
 	const { setVisibleSection, breakpoint } = useContext(AppContext)!;
+	const {ref, inView} = useInView({triggerOnce: false, threshold: 0.5});
+	
+	useEffect(() => {
+		console.log(inView);
+	}, [inView]);
 
 	return (
 		<ScrollSpySection
@@ -41,12 +47,13 @@ export const SectionFacilities = () => {
 				<div className={styles.divider}>
 					<span className={styles.line}></span>
 					<img src={folk_sign} />
+
 					<span className={styles.line}></span>
 				</div>
 
-				<div className={styles.itemsBox}>
+				<div className={styles.itemsBox} ref={ref}>
 					{facilities.map((item, index) => (
-						<FacilityItem icon={item.icon} title={item.title} key={index}/>
+						<FacilityItem icon={item.icon} title={item.title} key={index} isVisible={inView} style={{animationDelay: `${index*0.2}s`}}/>
 					))}
 				</div>
 			</Wrapper>

@@ -1,3 +1,5 @@
+@import '../../sass/animations';
+
 .item {
 	display: flex;
     flex-direction: column;
@@ -6,6 +8,12 @@
     width: 40%;
     height: 100px;
     color: white;
+    opacity: 0;
+
+
+    &--anime {
+        animation: fadeInFromTop 0.7s forwards ease-in-out;
+    }
 
     .icon {
         font-size: 5rem;
