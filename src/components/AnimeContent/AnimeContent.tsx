@@ -3,14 +3,14 @@ import { useInView } from 'react-intersection-observer';
 interface Props {
 	direction?: 'left' | 'right' | 'bottom';
 	children: React.ReactNode;
-    delay?: number;
-    duration?: number;
-    className?: string;
+	delay?: number;
+	duration?: number;
+	className?: string;
 }
 
-export const AnimeContent = ({ direction="left", children, delay=0, duration=1, className}: Props) => {
+export const AnimeContent = ({ direction="left", children, delay=0, duration=1, className }: Props) => {
     const { ref, inView} = useInView({
-        triggerOnce: true,
+        triggerOnce: false,
 		rootMargin: '-200px 0px',
 	});
     

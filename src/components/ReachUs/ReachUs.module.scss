@@ -41,7 +41,7 @@
 		text-align: center;
 	}
 
-	.map {
+	.mapContainer {
 		width: 100%;
 		height: 350px;
 		margin: 3em 0;
@@ -49,11 +49,19 @@
 		border-radius: 10px;
 		box-shadow: -2px 2px 20px rgba(0, 0, 0, 0.3);
 	}
+	
+	.map {
+		height: 100%;
+		width: 100%;
+		border-radius: 10px;
+		border: none;
+	}
 
 	.address {
 		@include text;
 		text-align: center;
-        font-size: 1.1em;
+		font-size: 1.1em;
+
 
 		.name {
 			font-weight: bold;
@@ -74,7 +82,6 @@
 
 @media (min-width: 576px) {
 	.reachUs {
-
 		.wave {
 			bottom: -40px;
 		}
@@ -98,12 +105,12 @@
 		.map-address_container {
 			display: flex;
 			justify-content: space-between;
-            align-items: center;
-            margin-top: 1em;
+			align-items: center;
+			margin-top: 1em;
 
-			.map {
+			.mapContainer {
 				width: 60%;
-                height: 250px;
+				height: 250px;
 			}
 		}
 	}
@@ -111,54 +118,53 @@
 
 @media (min-width: 992px) {
 	.reachUs {
-
 		.wave {
 			bottom: -10px;
 		}
 
-        .roadImg {
-            width: 700px;
-            bottom: 30px;
-        }
+		.roadImg {
+			width: 700px;
+			bottom: 30px;
+		}
 
 		.map-address_container {
-            justify-content: center;
-            gap: 8em;
+			justify-content: center;
+			gap: 8em;
 
-			.map {
+			.mapContainer {
 				width: 60%;
-                height: 300px;
+				height: 300px;
 			}
 		}
 	}
 }
 
-@media(min-width: 1200px) {
-    .reachUs {
+@media (min-width: 1200px) {
+	.reachUs {
 		padding-bottom: 150px;
 
-        .map-address_container{
-            .map {
-                height: 350px;
+		.map-address_container {
+			.mapContainer {
+				height: 350px;
 				max-width: 670px;
-            }
-        }
-    }
+			}
+		}
+	}
 }
 
-@media(min-width: 1400px) {
-    .reachUs {
-        .wrapper {
-            position: relative;
-        }
+@media (min-width: 1400px) {
+	.reachUs {
+		.wrapper {
+			position: relative;
+		}
 
-        .roadImg {
-            bottom: -90px;
-        }
-    }
+		.roadImg {
+			bottom: -90px;
+		}
+	}
 }
 
-@media(min-width: 1700px) {
+@media (min-width: 1700px) {
 	.reachUs {
 		padding-bottom: 200px;
 	}
