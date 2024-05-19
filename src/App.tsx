@@ -5,10 +5,12 @@ import { Toaster } from 'react-hot-toast';
 import { Nav } from './components/Nav/Nav';
 import { Outlet } from 'react-router-dom';
 import { ScrollToTop } from './helpers/ScrollToTop';
+import { AccountPopup } from './components/AccountPopup/AccountPopup';
 
 export const App = () => {
 	const [visibleSection, setVisibleSection] = useState<string>('');
 	const [mobileMenuShown, setMobileMenuShown] = useState(false);
+	const [showAccount, setShowAccount] = useState(false);
 	const [breakpoint, setBreakpoint] = useState({
 		sm: window.innerWidth >= 576,
 		md: window.innerWidth >= 768,
@@ -41,10 +43,12 @@ export const App = () => {
 		setMobileMenuShown,
 		visibleSection,
 		setVisibleSection,
+		setShowAccount,
 	};
 
 	return (
 		<AppContext.Provider value={contextValues}>
+				{showAccount && <AccountPopup/>}
 				<Nav />
 				<ScrollToTop/>
 				<Outlet/>

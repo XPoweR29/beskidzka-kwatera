@@ -29,10 +29,9 @@ const facilities: FacilityItem[] = [
 
 export const SectionFacilities = () => {
 	const { setVisibleSection, breakpoint } = useContext(AppContext)!;
-	const {ref, inView} = useInView({triggerOnce: false, threshold: 0.5});
+	const {ref, inView} = useInView({triggerOnce: true, threshold: 0.5});
 	
 	useEffect(() => {
-		console.log(inView);
 	}, [inView]);
 
 	return (

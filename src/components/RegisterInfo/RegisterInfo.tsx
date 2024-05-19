@@ -1,11 +1,15 @@
 import styles from './RegisterInfo.module.scss';
+import {useContext} from 'react';
 import contact_icon from '../../assets/icons/contact_icon.svg';
 import checkin_icon from '../../assets/icons/check-in_icon.svg';
 import checkout_icon from '../../assets/icons/check-out_icon.svg';
 import money_icon from '../../assets/icons/payment_icon.svg';
 import info_icon from '../../assets/icons/info_icon.svg';
+import { AppContext } from '../../context/AppContext';
 
 export const RegisterInfo = () => {
+	const {setShowAccount} = useContext(AppContext)!
+
 	return (
 		<div className={styles.container}>
 			<div className={styles.info}>
@@ -45,7 +49,7 @@ export const RegisterInfo = () => {
 				</div>
 				<p className={styles.text}>
 					Wybierz wygodę - zapłać na miejscu lub skorzystaj z opcji{' '}
-					<span>przelewu bankowego</span>
+					<span onClick={() => setShowAccount(true)}>przelewu bankowego</span>
 				</p>
 			</div>
 

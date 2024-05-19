@@ -1,0 +1,82 @@
+@import '../../sass/colors';
+@import '../../sass/mixins';
+@import '../../sass/animations';
+
+.popup {
+	position: fixed;
+	height: 100vh;
+	width: 100vw;
+	background: rgba(0, 0, 0, 0.6);
+	z-index: 101;
+	animation: fadeIn 0.5s forwards;
+
+	.wrapper {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 1em;
+		width: 100%;
+		height: fit-content;
+		background-color: white;
+		background-position: center;
+		background-size: cover;
+		border-radius: 10px;
+		border: 2px solid $main-orange;
+	}
+
+    &__text {
+        text-align: center;
+    }
+
+	.information {
+		display: flex;
+		flex-direction: column;
+        gap: 1.5em;
+		margin-top: 2em;
+
+		&__heading {
+			@include link;
+			width: fit-content;
+			margin-bottom: 0.5em;
+			font-size: 1em;
+		}
+
+		&__info {
+			@include text;
+			display: flex;
+			flex-direction: column;
+			font-weight: 450;
+
+			.copyBtn {
+				background-color: transparent;
+				color: $main-orange;
+				font-size: 2rem;
+				margin-left: 0.5em;
+
+				svg {
+					pointer-events: none;
+				}
+			}
+		}
+
+		&__example {
+			margin-top: 0.5em;
+			font-style: italic;
+			color: gray;
+		}
+	}
+
+	&__button {
+		@include mainBtn;
+		margin-top: 5em;
+		padding: 0.7em 1em;
+	}
+}

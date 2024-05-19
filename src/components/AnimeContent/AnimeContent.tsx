@@ -10,7 +10,7 @@ interface Props {
 
 export const AnimeContent = ({ direction="left", children, delay=0, duration=1, className }: Props) => {
     const { ref, inView} = useInView({
-        triggerOnce: false,
+        triggerOnce: true,
 		rootMargin: '-200px 0px',
 	});
     
