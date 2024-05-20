@@ -36,6 +36,8 @@
 		color: $dark-gray;
 
 		.title {
+			@include link;
+			width: fit-content;
 			font-weight: bold;
 			margin-bottom: 0.5em;
 		}
@@ -50,10 +52,30 @@
 		}
 	}
 
+	.footer {
+		margin-top: 3em;
+		max-width: 690px;
+		padding: 1em;
+		font-weight: 450;
+		background-image: url('../../assets/img/paper_texture.png');
+		border-radius: 10px;
+		box-shadow: -2px 2px 20px rgba(0, 0, 0, 0.3);
+
+		.notice {
+			@include link;
+			font-size: 1.1em;
+			text-decoration: none;
+		}
+
+		strong {
+			text-decoration: underline;
+		}
+	}
+
 	.checkIn_info {
 		position: relative;
 		width: 308px;
-		margin-top: 3em;
+		margin-top: 5em;
 		padding: 1em;
 		padding-top: 4em;
 		border-radius: 10px;
@@ -89,23 +111,14 @@
 @media (min-width: 400px) {
 	.pricing {
 		.flowersImg {
-			top: 250px;
-			width: 200px;
-		}
-
-		.checkIn_info {
-			margin-top: 5em;
-			scale: 1;
-		}
-	}
-}
-
-@media (min-width: 400px) {
-	.pricing {
-		.flowersImg {
 			top: 215px;
 			width: 200px;
 			left: 10px;
+		}
+
+		.checkIn_info {
+			margin-top: 7em;
+			scale: 1;
 		}
 	}
 }
@@ -114,6 +127,7 @@
 	.pricing {
 		.checkIn_info {
 			width: fit-content;
+			margin-top: 10em;
 		}
 	}
 }

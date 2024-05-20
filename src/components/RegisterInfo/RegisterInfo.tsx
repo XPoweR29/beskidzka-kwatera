@@ -37,6 +37,7 @@ export const RegisterInfo = () => {
 					<div className={styles.title}>
 						<img src={checkout_icon} className={styles.icon} />
 						<h4>wymeldowanie</h4>
+						
 					</div>
 					<p className={`${styles.text} ${styles.hours}`}>8:00 - 10:00</p>
 				</div>
