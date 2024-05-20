@@ -11,7 +11,7 @@ export const Nav = () => {
 	return (
 		<nav className={`${styles.nav} ${mobileMenuShown ? styles['activeMobileMenu'] : '' }`}>
 			<div className={styles.navbar_container}>
-				<a href='#' className={styles.logo}>
+				<a href='/' className={styles.logo}>
 					<img src={logo} />
 				</a>
 
