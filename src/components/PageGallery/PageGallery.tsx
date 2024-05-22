@@ -45,13 +45,13 @@ export const PageGallery = () => {
 				id='gallery'
 				onVisible={() => setVisibleSection('galeria')}>
 				<Wrapper className={styles.wrapper}>
-					<img src={butterfly} alt='motyl' className={styles.butterflyImg} />
-					<img src={bg_wave} className={styles.background_wave} />
+					<img src={butterfly} alt='' className={styles.butterflyImg}/>
+					<img src={bg_wave} className={styles.background_wave} alt=''/>
 
 					<h2 className={styles.heading}>Galeria</h2>
 					<div className={styles.divider}>
 						<span className={styles.line}></span>
-						<img src={folk_sign} />
+						<img src={folk_sign} alt=''/>
 						<span className={styles.line}></span>
 					</div>
 
@@ -66,7 +66,7 @@ export const PageGallery = () => {
 						{photos.map((photo, i) => {
 							return (
 								<div className={styles.thumbnail} key={i} onClick={()=>previewHandler(photo)}>
-									<img src={photo} alt='Zdjęcie obiektu' />
+									<img src={photo} alt='Pokój na wynajem, nocleg' />
 								</div>
 							);
 						})}
@@ -74,7 +74,7 @@ export const PageGallery = () => {
 				</Wrapper>
 
 				{previewShown&&clickedImg&& <PhotoPreview photos={photos} isPreviewShown={setPreviewShown} clickedImg={clickedImg}/>}
-				<img src={breakpoint.lg?wave_large:wave_small} className={styles.wave} />
+				<img src={breakpoint.lg?wave_large:wave_small} className={styles.wave} alt=''/>
 			</ScrollSpySection>
             <Footer/>
 		</>

@@ -13,7 +13,7 @@ interface Props {
 export const PricingCard = ({period, price, brief, image, className}: Props) => {
 	return (
 		<div className={`${styles.card} ${className}`}>
-            <img src={image} className={styles.card__image} />
+            <img src={image} className={styles.card__image} alt='Sposób na spędzanie czas w beskidach'/>
 			<div className={styles.card__content}>
 				<p className={styles.card__period}>{period}</p>
 				<div className={styles.card__price}>
@@ -21,7 +21,7 @@ export const PricingCard = ({period, price, brief, image, className}: Props) => 
 				</div>
 				<div className={styles.card__brief}>{brief}</div>
 			</div>
-            <img src={corner} className={styles.cornerImg} draggable='false'/>
+            <img src={corner} className={styles.cornerImg} draggable='false' alt=''/>
 		</div>
 	);
 };

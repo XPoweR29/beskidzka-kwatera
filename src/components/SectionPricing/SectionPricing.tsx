@@ -17,7 +17,7 @@ export const SectionPricing = () => {
 			className={styles.pricing}
 			onVisible={() => setVisibleSection('cennik')}>
 			<Wrapper className={styles.wrapper}>
-				<img src={flowers} className={styles.flowersImg} />
+				<img src={flowers} className={styles.flowersImg} alt=''/>
 				<h2 className={styles.heading}>Cennik</h2>
 				<p className={styles.text}>
 					Zapraszamy do skorzystania z naszej wyjątkowej oferty pobytu w sercu

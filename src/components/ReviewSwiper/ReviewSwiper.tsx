@@ -32,7 +32,7 @@ export const ReviewSwiper = ({ className }: Props) => {
 
 	return (
 		<div className={styles.outterContainer}>
-			<img src={breakpoint.md?bird_big:bird_small} className={styles.birdImg} draggable='false'/>
+			<img src={breakpoint.md?bird_big:bird_small} className={styles.birdImg} draggable='false' alt=''/>
 			<Swiper
 				className={`${styles.swiperContainer} ${className}`}
 				modules={[Autoplay, Navigation]}

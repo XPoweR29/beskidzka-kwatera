@@ -12,7 +12,7 @@ export const Nav = () => {
 		<nav className={`${styles.nav} ${mobileMenuShown ? styles['activeMobileMenu'] : '' }`}>
 			<div className={styles.navbar_container}>
 				<a href='/' className={styles.logo}>
-					<img src={logo} />
+					<img src={logo} alt='kwatery u zosi - logo'/>
 				</a>
 
 				{breakpoint.lg ? (

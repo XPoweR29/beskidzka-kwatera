@@ -19,7 +19,7 @@ export const SectionOffer = () => {
 			onVisible={() => setVisibleSection('oferta')}>
 			<Wrapper className={styles.wrapper}>
 
-				<img src={folk_sign} className={styles.folk_sign} draggable='false' />
+				<img src={folk_sign} className={styles.folk_sign} draggable='false' alt=''/>
 				
 
 				<Brief className={styles.attractions_brief}/>	
@@ -44,11 +44,12 @@ export const SectionOffer = () => {
 						Zobacz więcej
 						<Icon icon='tdesign:arrow-right' className={styles.arrow}/>
 					</a>
-					<img src={flowers} className={styles.flowers} draggable='false' />
+					<img src={flowers} className={styles.flowers} draggable='false' alt=''/>
 					<img
 						src={offer_photots}
 						className={styles.photos_img}
 						draggable='false'
+						alt='Przytulne pokoje na wynajem'
 					/>
 				</div>
 			</Wrapper>

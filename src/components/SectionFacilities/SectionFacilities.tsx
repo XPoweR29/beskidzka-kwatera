@@ -39,13 +39,13 @@ export const SectionFacilities = () => {
 			className={styles.facilities}
 			id='udogodnienia'
 			onVisible={() => setVisibleSection('udogodnienia')}>
-			<img src={breakpoint.lg?grayWave_big:grayWave_small} className={styles.wave_gray} draggable='false'/>
+			<img src={breakpoint.lg?grayWave_big:grayWave_small} className={styles.wave_gray} draggable='false' alt=''/>
 
 			<Wrapper className={styles.wrapper}>
 				<h2 className={styles.heading}>Udogodnienia</h2>
 				<div className={styles.divider}>
 					<span className={styles.line}></span>
-					<img src={folk_sign} />
+					<img src={folk_sign} alt=''/>
 
 					<span className={styles.line}></span>
 				</div>
@@ -56,7 +56,7 @@ export const SectionFacilities = () => {
 					))}
 				</div>
 			</Wrapper>
-			<img src={breakpoint.lg?whiteWave_big:whiteWave_small} className={styles.wave_white} draggable='false'/>
+			<img src={breakpoint.lg?whiteWave_big:whiteWave_small} className={styles.wave_white} draggable='false' alt=''/>
 		</ScrollSpySection>
 	);
 };

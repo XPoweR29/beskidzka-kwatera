@@ -14,7 +14,7 @@ export const RegisterInfo = () => {
 		<div className={styles.container}>
 			<div className={styles.info}>
 				<div className={styles.title}>
-					<img src={contact_icon} className={styles.icon} />
+					<img src={contact_icon} className={styles.icon} alt='ikona'/>
 					<h4>rezerwacja</h4>
 				</div>
 				<p className={styles.text}>
@@ -27,7 +27,7 @@ export const RegisterInfo = () => {
 			<div className={styles.info__time}>
 				<div className={styles.info}>
 					<div className={styles.title}>
-						<img src={checkin_icon} className={styles.icon} />
+						<img src={checkin_icon} className={styles.icon} alt='ikona'/>
 						<h4>zameldowanie</h4>
 					</div>
 					<p className={`${styles.text} ${styles.hours}`}>14:00 - 18:00</p>
@@ -35,7 +35,7 @@ export const RegisterInfo = () => {
 
 				<div className={styles.info}>
 					<div className={styles.title}>
-						<img src={checkout_icon} className={styles.icon} />
+						<img src={checkout_icon} className={styles.icon} alt='ikona'/>
 						<h4>wymeldowanie</h4>
 						
 					</div>
@@ -45,7 +45,7 @@ export const RegisterInfo = () => {
 
 			<div className={styles.info}>
 				<div className={styles.title}>
-					<img src={money_icon} className={`${styles.icon} ${styles['icon--money']}`} />
+					<img src={money_icon} className={`${styles.icon} ${styles['icon--money']}`} alt='ikona'/>
 					<h4>płatność</h4>
 				</div>
 				<p className={styles.text}>
@@ -56,7 +56,7 @@ export const RegisterInfo = () => {
 
 			<div className={styles.info}>
 				<div className={styles.title}>
-					<img src={info_icon} className={`${styles.icon} ${styles['icon--info']}`} />
+					<img src={info_icon} className={`${styles.icon} ${styles['icon--info']}`} alt='ikona'/>
 					<h4>informacja</h4>
 				</div>
 				<p className={styles.text}>

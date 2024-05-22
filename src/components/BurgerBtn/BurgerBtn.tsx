@@ -6,7 +6,8 @@ interface Props {
 
 export const BurgerBtn = ({className, mobileMenuShown, toggleMenu}: Props) => {
 
-    const burgerHandler = () => {
+    const burgerHandler = (e: React.MouseEvent<HTMLButtonElement>) => {
+        e.preventDefault();
         const menuState = mobileMenuShown; 
         toggleMenu(!menuState);
     };

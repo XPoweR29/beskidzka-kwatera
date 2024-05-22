@@ -59,7 +59,7 @@ export const PageAttractions = () => {
 						<h1 className={styles.header__title}> Odkrywaj Węgierską Górkę</h1>
 						<div className={styles.divider}>
 							<span className={styles.line}></span>
-							<img src={folk_sign} />
+							<img src={folk_sign} alt=''/>
 							<span className={styles.line}></span>
 						</div>
 					</Wrapper>
@@ -67,14 +67,16 @@ export const PageAttractions = () => {
 						src={breakpoint.lg ? whiteWave_large : whiteWave_small}
 						className={styles.whiteWave}
 						draggable='false'
+						alt=''
 					/>
 				</header>
 
 				<Wrapper className={styles.wrapper}>
-					<img src={bg_wave} className={styles.background_wave} />
+					<img src={bg_wave} className={styles.background_wave} alt=''/>
 					<img
 						src={bg_wave}
 						className={`${styles.background_wave} ${styles['background_wave--2']}`}
+						alt=''
 					/>
 
 					<p className={styles.attractions__text}>
@@ -89,8 +91,8 @@ export const PageAttractions = () => {
 						<AnimeContent direction='left' className={styles.animated}>
 							<div className={styles.attraction}>
 								<div className={styles.attraction__photo}>
-									<img src={fort1} alt='zdjęcie fortów' />
-									<img src={fort2} alt='zdjęcie fortów' />
+									<img src={fort1} alt='forty w węgierskiej górce' />
+									<img src={fort2} alt='fortyfikacje' />
 								</div>
 
 								<div className={styles.attraction__brief}>
@@ -119,10 +121,11 @@ export const PageAttractions = () => {
 									src={folk_sign_big}
 									className={styles.folk_sign_big}
 									draggable='false'
+									alt=''
 								/>
 								<div
 									className={`${styles.attraction__photo} ${styles['attraction__photo--v2']}`}>
-									<img src={statue2} alt='zdjęcie zbójników' />
+									<img src={statue2} alt='aleja zbójników' />
 									<img src={statue1} alt='zdjęcie zbójników' />
 								</div>
 								<div className={styles.attraction__brief}>
@@ -150,7 +153,7 @@ export const PageAttractions = () => {
 							<div className={styles.attraction}>
 								<div
 									className={`${styles.attraction__photo} ${styles['attraction__photo--v3']}`}>
-									<img src={boulevard1} alt='bulwary nad sołą' />
+									<img src={boulevard1} alt='deptak nad sołą' />
 									<img src={boulevard2} alt='bulwary nad sołą' />
 								</div>
 
@@ -179,9 +182,10 @@ export const PageAttractions = () => {
 									src={butterfly}
 									className={styles.butterfly}
 									draggable='false'
+									alt=''
 								/>
 								<div className={`${styles.attraction__photo}`}>
-									<img src={gory1} alt='górskie widoki' />
+									<img src={gory1} alt='widok na beskidy' />
 									<img src={gory2} alt='górskie widoki' />
 								</div>
 								<div className={styles.attraction__brief}>
@@ -209,7 +213,7 @@ export const PageAttractions = () => {
 							<div className={styles.attraction}>
 								<div className={`${styles.attraction__photo}`}>
 									<img src={bewery1} alt='muzeum borwaru żywieckiego' />
-									<img src={bewery2} alt='muzeum browaru żywieckiego' />
+									<img src={bewery2} alt='piwiarnia żywiecka' />
 								</div>
 
 								<div className={styles.attraction__brief}>
@@ -235,8 +239,8 @@ export const PageAttractions = () => {
 							<div className={styles.attraction}>
 								<div
 									className={`${styles.attraction__photo} ${styles['attraction__photo--v3']}`}>
-									<img src={inn1} alt='karczma' />
-									<img src={inn2} alt='karczma' />
+									<img src={inn1} alt='karczma w węgierskiej górce' />
+									<img src={inn2} alt='gastronomia w węgierskiej górce' />
 								</div>
 
 								<div className={styles.attraction__brief}>
@@ -263,6 +267,7 @@ export const PageAttractions = () => {
 				<img
 					src={breakpoint.md ? wave__large : wave__small}
 					className={styles.wave}
+					alt=''
 				/>
 			</ScrollSpySection>
 			<Footer />

@@ -17,7 +17,7 @@ export const PageContact = () => {
 		<>
 			<ScrollSpySection id='kontakt' className={styles.contact} onVisible={()=>setVisibleSection('kontakt')}>
 				<Wrapper className={styles.wrapper}>
-					<img src={bg_wave} className={styles.background_wave} />
+					<img src={bg_wave} className={styles.background_wave}  alt=''/>
 					<h1 className={styles.heading}>Skontaktuj się z nami</h1>
 					<p className={styles.text}>
 						Masz pytania lub chcesz dowiedzieć się więcej o pobycie w
@@ -65,6 +65,7 @@ export const PageContact = () => {
 				<img
 					src={breakpoint.md ? wave__large : wave__small}
 					className={styles.wave}
+					alt=''
 				/>
 			</ScrollSpySection>
 

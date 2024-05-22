@@ -9,7 +9,7 @@ export const Footer = () => {
 	return (
 		<section id='footer' className={styles.footer}>
 			<Wrapper className={styles.wrapper}>
-				<img src={logo} alt='logotyp' className={styles.logo} />
+				<img src={logo} alt='kwatery u zosi - logo' className={styles.logo} />
 
 				<div className={`${styles.item} ${styles['item--address']}`}>
 					<h4 className={styles.title}>Beskidzka Kwatera</h4>
@@ -33,7 +33,7 @@ export const Footer = () => {
 					<p>© {currentYear} Beskidzka Kwatera</p>
 					<p>Wszelkie prawa zastrzeżone</p>
 					<span>
-						<a href='#'>Polilstyka prywatności</a> | <a href='#'>Regulamin</a>
+						<a href='/'>Polilstyka prywatności</a> | <a href='/'>Regulamin</a>
 					</span>
 				</div>
 
@@ -43,7 +43,7 @@ export const Footer = () => {
 						href='https://webcraft-studio.pl/'
 						target='_blank'
 						rel='noopener noreferrer'>
-						<img src={dev_logo} />
+						<img src={dev_logo} alt='webcraft studio logo '/>
 					</a>
 				</div>
 			</Wrapper>

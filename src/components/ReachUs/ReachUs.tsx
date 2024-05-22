@@ -20,11 +20,13 @@ export const ReachUs = () => {
 			<img
 				src={breakpoint.md ? wave_large : wave_small}
 				className={styles.wave}
+				alt=''
 			/>
 			<Wrapper className={styles.wrapper}>
 				<img
 					src={breakpoint.md ? road_large : road_small}
 					className={styles.roadImg}
+					alt=''
 				/>
 
 				<h2 className={styles.heading}>Jak nas znaleźć?</h2>

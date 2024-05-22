@@ -23,7 +23,6 @@
 		justify-content: space-between;
 		align-items: center;
 
-
 		.logo {
 			display: flex;
 			justify-content: center;
@@ -32,6 +31,11 @@
 			img {
 				width: 140px;
 			}
+		}
+
+		.burgerBtn {
+			-webkit-tap-highlight-color: transparent; 
+			-moz-user-focus: none; 
 		}
 	}
 

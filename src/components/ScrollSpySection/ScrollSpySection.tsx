@@ -10,7 +10,7 @@ interface Props {
 
 export const ScrollSpySection = ({id, className, onVisible, children}: Props) => {
     const {ref, inView} = useInView({
-        threshold: 0.6,
+        threshold: 0.4,
         triggerOnce: false,
     }); 
 
