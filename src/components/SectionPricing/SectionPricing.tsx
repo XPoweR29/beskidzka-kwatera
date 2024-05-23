@@ -6,7 +6,7 @@ import { Wrapper } from '../Wrapper/Wrapper';
 import { PricingSwiper } from '../PricingSwiper/PricingSwiper';
 import { PricingCards } from '../PricingCards/PricingCards';
 import { RegisterInfo } from '../RegisterInfo/RegisterInfo';
-import flowers from '../../assets/img/flowers_3.png';
+import flowers from '../../assets/img/flowers_3.webp';
 
 export const SectionPricing = () => {
 	const { setVisibleSection, breakpoint } = useContext(AppContext)!;
