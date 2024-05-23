@@ -1,34 +1,38 @@
 [
     {
-        "username": "Paula Sternat",
+        "username": "Anna",
+        "review": "Świetna miejsce! Bardzo wygodne pokoje i przemiła obsługa. Na pewno wrócimy i polecamy wszystkim szukającym spokoju."
+    },
+    {
+        "username": "Katarzyna",
+        "review": "Przytulne pokoje i świetna lokalizacja. Z pewnością jeszcze tutaj zagościmy. To idealne miejsce na weekendowy relaks."
+    },
+    {
+        "username": "Marcin",
+        "review": "Oferta przewyższyła nasze oczekiwania. Wszystko na najwyższym poziomie, a obsługa bardzo pomocna i sympatyczna. Bliskość górskich szlaków to dodatkowy atut."
+    },
+    {
+        "username": "Magdalena",
+        "review": "Spędziliśmy tutaj wspaniałe wakacje. Wszystko zgodne z opisem, a warunki nawet lepsze niż się spodziewaliśmy. Polecam zwiedzenie okolicznych atrakcji oraz spacer bulwarami."
+    },
+    {
+        "username": "Olga",
         "review": "Wspaniała okolica. Niewielka miejscowość o bardzo bogatej historii. Najbliższa okolica tj. w granicach miejscowości zapewnia wiele ciekawych miejsc do zwiedzenia. Idelane mijesce na odpocznek w Beskidach."
     },
     {
-        "username": "Bartek Duc",
-        "review": "Nasz pobyt był fantastyczny, z komfortowymi pokojami i serdeczną atmosferą, która zapraszała do relaksu po pełnym wrażeń dniu. Lokalne szlaki i karczmy oferują mnóstwo atrakcji, co czyni to miejsce idealnym punktem wypadowym do odkrywania okolicznych piękności. "
+        "username": "Bartek",
+        "review": "Świetna relacja jakości do ceny. Czysto, wygodnie i spokojnie. Na pewno wrócimy przy najbliższej okazji. Warto wybrać się na pobliskie wycieczki piesze."
     },
     {
-        "username": "Marcin Kijas",
-        "review": "Mój pobyt w tym miejscu przekroczył wszelkie oczekiwania! Komfortowe zakwaterowanie i serdeczna obsługa stworzyły idealne warunki do odpoczynku. Region oferuje mnóstwo atrakcji, od pieszych wędrówek po pyszne posiłki w regionalnych restauracjach."
+        "username": "Jacek",
+        "review": "To wspaniałe miejsce na odpoczynek. Pokoje są wygodne, a widoki zapierają dech w piersiach. Miłoścnicy aktywnego wypoczynku napewno nie będą narzekać. Świetna lokalizacja – blisko do dwóch karczm i sklepów. Każdy znajdzie tu coś dla siebie."
     },
     {
-        "username": "Anna Temel",
-        "review": "Zachwyciły nas przepiękne widoki na góry i doskonała lokalizacja naszego noclegu, która była idealną bazą do górskich wycieczek. Pokoje były wygodne i czyste, a obsługa niezwykle pomocna i przyjazna. Zdecydowanie polecam to miejsce każdemu miłośnikowi natury i górskich przygód!"
+        "username": "Natalia",
+        "review": "Spędziliśmy wspaniały czas w tym miejscu. Pokoje są przestronne i bardzo czyste. Blisko do miejs gdzie można zjeść naprawdę smacznie i syto. Na duży plus dostępność miejsca do grillowania, które jest świetnym miejscem na wieczotne posiedzenia. Zdecydowanie polecamy!"
     },
     {
-        "username": "Paula Sternat",
-        "review": "Wspaniała okolica. Niewielka miejscowość o bardzo bogatej historii. Najbliższa okolica tj. w granicach miejscowości zapewnia wiele ciekawych miejsc do zwiedzenia. Idelane mijesce na odpocznek w Beskidach."
-    },
-    {
-        "username": "Bartek Duc",
-        "review": "Nasz pobyt był fantastyczny, z komfortowymi pokojami i serdeczną atmosferą, która zapraszała do relaksu po pełnym wrażeń dniu. Lokalne szlaki i karczmy oferują mnóstwo atrakcji, co czyni to miejsce idealnym punktem wypadowym do odkrywania okolicznych piękności. "
-    },
-    {
-        "username": "Marcin Kijas",
-        "review": "Mój pobyt w tym miejscu przekroczył wszelkie oczekiwania! Komfortowe zakwaterowanie i serdeczna obsługa stworzyły idealne warunki do odpoczynku. Region oferuje mnóstwo atrakcji, od pieszych wędrówek po pyszne posiłki w regionalnych restauracjach."
-    },
-    {
-        "username": "Anna Temel",
-        "review": "Zachwyciły nas przepiękne widoki na góry i doskonała lokalizacja naszego noclegu, która była idealną bazą do górskich wycieczek. Pokoje były wygodne i czyste, a obsługa niezwykle pomocna i przyjazna. Zdecydowanie polecam to miejsce każdemu miłośnikowi natury i górskich przygód!"
+        "username": "Daniel",
+        "review": "Fantastyczne miejsce! Znakomite warunki i cudowna okolica. Idealne na odpoczynek od miejskiego zgiełku. Zdecydowanie polecam wybrać się tutaj z rowerem."
     }
 ]
