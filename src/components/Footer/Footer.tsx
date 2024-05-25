@@ -33,7 +33,7 @@ export const Footer = () => {
 					<p>© {currentYear} Kwtery u Zosi</p>
 					<p>Wszelkie prawa zastrzeżone</p>
 					<span>
-						<a href='/'>Polilstyka prywatności</a> | <a href='/'>Regulamin</a>
+						<a href='/polityka-prywatnosci'>Polilstyka prywatności</a> | <a href='/regulamin'>Regulamin</a>
 					</span>
 				</div>
 

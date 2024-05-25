@@ -110,8 +110,8 @@ export const Form = ({ className }: Props) => {
 				<input type='checkbox' required ref={checkboxRef}/>
 				<p>
 					Zapoznałem(-am) się i akceptuję {''}{' '}
-					<a href='/'>politykę prywatności</a> oraz {''}{' '}
-					<a href='/'>regulamin</a>.
+					<a href='/polityka-prywatnosci'>politykę prywatności</a> oraz {''}{' '}
+					<a href='/regulamin'>regulamin</a>.
 				</p>
 			</div>
 

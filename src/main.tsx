@@ -6,6 +6,8 @@ import { PageHome } from './components/PageHome/PageHome';
 import { PageContact } from './components/PageContact/PageContact';
 import { PageGallery } from './components/PageGallery/PageGallery';
 import { PageAttractions } from './components/PageAttractions/PageAttractions';
+import { TermsConditions } from './components/TermsConditions/TermsConditions';
+import { PrivacyPolicy } from './components/PrivacyPolicy/PrivacyPolicy';
 
 const router = createBrowserRouter([
     {
@@ -27,7 +29,15 @@ const router = createBrowserRouter([
             {
                 path: 'atrakcje',
                 element: <PageAttractions/>
-            }
+            },
+            {
+                path: 'regulamin',
+                element: <TermsConditions/>
+            },
+            {
+                path: 'polityka-prywatnosci',
+                element: <PrivacyPolicy/>
+            },
         ]
     }
 ]);
