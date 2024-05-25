@@ -29,10 +29,12 @@ export const AccountPopup = () => {
 								Numer konta bankowego:
 							</h2>
 							<p className={styles.information__info}>
-								<span>ING Bank Śląski</span>
+								<span>PKO Bank Polski</span>
 								<span>
-									<span>72 9834 0093 8912 7842 0923</span>
-									<button onClick={handleCopy} className={styles.copyBtn}><Icon icon='bi:copy'/></button>
+									<span>40 1020 1390 0000 6402 0585 2712</span>
+									<button onClick={handleCopy} className={styles.copyBtn}>
+										<Icon icon='bi:copy' />
+									</button>
 								</span>
 							</p>
 						</div>
