@@ -1,7 +1,7 @@
 import ReactDOM from 'react-dom/client'
 import './index.scss'
 import { App } from './App'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom'
 import { PageHome } from './components/PageHome/PageHome';
 import { PageContact } from './components/PageContact/PageContact';
 import { PageGallery } from './components/PageGallery/PageGallery';
@@ -38,6 +38,10 @@ const router = createBrowserRouter([
                 path: 'polityka-prywatnosci',
                 element: <PrivacyPolicy/>
             },
+            {
+                path: '*',
+                element: <Navigate to={'/'}/>
+            }
         ]
     }
 ]);
