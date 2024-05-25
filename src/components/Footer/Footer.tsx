@@ -12,14 +12,14 @@ export const Footer = () => {
 				<img src={logo} alt='kwatery u zosi - logo' className={styles.logo} />
 
 				<div className={`${styles.item} ${styles['item--address']}`}>
-					<h4 className={styles.title}>Beskidzka Kwatera</h4>
+					<h4 className={styles.title}>Kwatery u Zosi</h4>
 					<a href='https://www.google.com/maps/?q=Węgierska+Górka+ul+Zielona+136'>
 						ul. Zielona 136, 34-350 Węgierska Górka
 					</a>
-					<a href='mailto:kontakt@beskidzkakwatera.pl'>
-						Email: kontak@beskidzkakwatera.pl
+					<a href='mailto:kontakt@kwateryuzosi.pl'>
+						Email: kontakt@kwateryuzosi.pl
 					</a>
-					<a href='tel:+48123456789'>Tel: +48 123 456 789</a>
+					<a href='tel:+48607262643'>Tel: +48 607 262 643</a>
 				</div>
 
 				<div className={`${styles.item} ${styles['item--links']}`}>
@@ -30,7 +30,7 @@ export const Footer = () => {
 				</div>
 
 				<div className={`${styles.item} ${styles['item--info']}`}>
-					<p>© {currentYear} Beskidzka Kwatera</p>
+					<p>© {currentYear} Kwtery u Zosi</p>
 					<p>Wszelkie prawa zastrzeżone</p>
 					<span>
 						<a href='/'>Polilstyka prywatności</a> | <a href='/'>Regulamin</a>

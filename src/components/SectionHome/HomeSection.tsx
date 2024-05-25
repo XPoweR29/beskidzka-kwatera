@@ -22,7 +22,7 @@ export const SectionHome = () => {
 					Twoje miejsce w <span>Beskidach</span>{' '}
 				</h1>
 				<p className={styles.text}>
-					Witaj w Beskidzkiej Kwaterze — Twoim mijescu z dala od domu. Odkryj przestrzeń stowrzoną dla Twojego komfortu i relaksu. Poczuj harmonię z otaczającą naturą i ciesz się naszą gościnnością przez cały rok.
+					Witaj w Kwaterach u Zosi — Twoim mijescu z dala od domu. Odkryj przestrzeń stowrzoną dla Twojego komfortu i relaksu. Poczuj harmonię z otaczającą naturą i ciesz się naszą gościnnością przez cały rok.
 				</p>
 
 				<a href='#cennik' className={styles.ctaBtn}>

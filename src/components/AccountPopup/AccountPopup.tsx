@@ -52,7 +52,7 @@ export const AccountPopup = () => {
 							<h2 className={styles.information__heading}>Tytuł przelewu:</h2>
 							<p className={styles.information__info}>
 								<span>
-									W tytule przelewu prosimy zawrzeć swoje imię i nazwiskon np:
+									W tytule przelewu prosimy zawrzeć swoje imię i nazwisko np:
 								</span>
 								<span className={styles.information__example}>
 									"Płatność - Jan Kowalski"

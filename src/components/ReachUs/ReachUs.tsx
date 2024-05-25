@@ -48,7 +48,7 @@ export const ReachUs = () => {
 
 					<AnimeContent direction='right'>
 						<div className={styles.address}>
-							<p className={styles.name}>Beskidzka Kwatera</p>
+							<p className={styles.name}>Kwatery u Zosi</p>
 							<p className={styles.road}>ul. Zielona 136</p>
 							<p className={styles.zipCode}>34-350 Węgierska Górka</p>
 						</div>

@@ -15,30 +15,37 @@ export const PageContact = () => {
 
 	return (
 		<>
-			<ScrollSpySection id='kontakt' className={styles.contact} onVisible={()=>setVisibleSection('kontakt')}>
+			<ScrollSpySection
+				id='kontakt'
+				className={styles.contact}
+				onVisible={() => setVisibleSection('kontakt')}>
 				<Wrapper className={styles.wrapper}>
-					<img src={bg_wave} className={styles.background_wave}  alt=''/>
+					<img src={bg_wave} className={styles.background_wave} alt='' />
 					<h1 className={styles.heading}>Skontaktuj się z nami</h1>
 					<p className={styles.text}>
-						Masz pytania lub chcesz dowiedzieć się więcej o pobycie w
-						Beskidzkiej Kwaterze? Jesteśmy tutaj, aby pomóc. Skorzystaj z
-						poniższego formularza kontaktowego lub skontaktuj się z nami
-						bezpośrednio poprzez e-mail lub telefon. Odpowiemy na wszystkie
-						Twoje zapytania, pomagając zaplanować niezapomniany pobyt.
+						Masz pytania lub chcesz dowiedzieć się więcej o pobycie u nas?
+						Jesteśmy tutaj, aby pomóc. Skorzystaj z poniższego formularza
+						kontaktowego lub skontaktuj się z nami bezpośrednio poprzez e-mail
+						lub telefon. Odpowiemy na wszystkie Twoje zapytania, pomagając
+						zaplanować niezapomniany pobyt.
 					</p>
 
 					<div className={styles['info-map_container']}>
 						<div className={styles.info}>
 							<div className={styles.info__item}>
 								<Icon icon='mdi:location' className={styles.icon} />
-								<a href='https://www.google.com/maps/?q=Węgierska+Górka+ul+Zielona+136'>
+								<a
+									href='https://www.google.com/maps/?q=Węgierska+Górka+ul+Zielona+136'
+									target='_blank'
+									rel='nooperner noreferer'
+									>
 									ul. Zielona 136, 34-350 Węgierska Górka
 								</a>
 							</div>
 
 							<div className={styles.info__item}>
 								<Icon icon='ic:round-phone' className={styles.icon} />
-								<a href='tel: +48 123 456 798'>+48 123 456 789</a>
+								<a href='tel: +48 607 262 643'>+48 607 262 643</a>
 							</div>
 
 							<div className={styles.info__item}>

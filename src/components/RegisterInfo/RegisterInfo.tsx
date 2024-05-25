@@ -30,7 +30,7 @@ export const RegisterInfo = () => {
 						<img src={checkin_icon} className={styles.icon} alt='ikona'/>
 						<h4>zameldowanie</h4>
 					</div>
-					<p className={`${styles.text} ${styles.hours}`}>14:00 - 18:00</p>
+					<p className={`${styles.text} ${styles.hours}`}>14:00 - 20:00</p>
 				</div>
 
 				<div className={styles.info}>
@@ -39,7 +39,7 @@ export const RegisterInfo = () => {
 						<h4>wymeldowanie</h4>
 						
 					</div>
-					<p className={`${styles.text} ${styles.hours}`}>8:00 - 10:00</p>
+					<p className={`${styles.text} ${styles.hours}`}>10:00 - 11:00</p>
 				</div>
 			</div>
 
