@@ -26,7 +26,7 @@ export const PricingSwiper = () => {
 					<PricingCard
 						image={bouelvard}
 						period='1 doba'
-						price={100}
+						price={90}
 						brief='Idealnie na szybki odpoczynek.'
 					/>
 				</SwiperSlide>
@@ -44,7 +44,7 @@ export const PricingSwiper = () => {
 					<PricingCard
 						image={path}
 						period='3 doby'
-						price={90}
+						price={75}
 						brief='Ciesz się górami jeszcze dłużej.'
 					/>
 				</SwiperSlide>
