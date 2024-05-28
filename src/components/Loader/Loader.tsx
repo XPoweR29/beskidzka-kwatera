@@ -1,7 +1,10 @@
+import { Wrapper } from '../Wrapper/Wrapper';
 import styles from './Loader.module.scss';
 
 export const Loader = () => {
-    return (
-        <h1 className={styles.title}>Loading....</h1>
-    );
+	return (
+		<Wrapper className={styles.wrapper}>
+			<div className={styles.loader}></div>
+		</Wrapper>
+	);
 };
