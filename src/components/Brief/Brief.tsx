@@ -21,9 +21,9 @@ export const Brief = ({ className }: Props) => {
 			<div
 				className={`${styles.brief} ${inView ? styles['brief--active'] : ''}`}
 				ref={ref}>
-				<h3 className={styles.heading}>
+				<h2 className={styles.heading}>
 					Węgierska Górka w Beskidzie Żywieckim
-				</h3>
+				</h2>
 				{!breakpoint.lg ? (
 					<p className={styles.text}>
 						Odkryj klimatyczne karczmy, i ścieżki beskidzkie tuż przy naszym

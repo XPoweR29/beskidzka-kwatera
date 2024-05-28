@@ -59,7 +59,7 @@
 		max-width: 690px;
 		padding: 1em;
 		font-weight: 450;
-		background-image: url('../../assets/img/paper_texture.png');
+		background-image: url('../../assets/img/paper_texture.webp');
 		border-radius: 10px;
 		box-shadow: -2px 2px 20px rgba(0, 0, 0, 0.3);
 		border: 1px solid $main-orange;
@@ -82,7 +82,8 @@
 		padding: 1em;
 		padding-top: 4em;
 		border-radius: 10px;
-		background-image: url('../../assets/img/paper_texture.png');
+		border: 1px solid $main-orange;
+		background-image: url('../../assets/img/paper_texture.webp');
 		background-size: cover;
 		background-position: center;
 		box-shadow: -2px 2px 20px rgba(0, 0, 0, 0.3);

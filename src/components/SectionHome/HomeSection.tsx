@@ -1,8 +1,8 @@
 import { Wrapper } from '../Wrapper/Wrapper';
 import styles from './HomeSection.module.scss'; 
-import vector_small from '../../assets/img/homeVector_small.svg';
-import vector_large from '../../assets/img/homeVector_large.svg';
-import flowers from '../../assets/img/flowers.png';
+import vector_small from '../../assets/img/homeVector_small.webp';
+import vector_large from '../../assets/img/homeVector_large.webp';
+import flowers from '../../assets/img/flowers.webp';
 import { ScrollBtn } from '../ScrollBtn/ScrollBtn';
 import { useContext } from 'react';
 import { AppContext } from '../../context/AppContext';

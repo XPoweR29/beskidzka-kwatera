@@ -61,7 +61,8 @@ export const PageContact = () => {
 									width='600'
 									height='450'
 									className={styles.map}
-									loading='lazy'></iframe>
+									loading='lazy'
+									title='map'></iframe>
 							)}
 						</div>
 
@@ -80,3 +81,5 @@ export const PageContact = () => {
 		</>
 	);
 };
+
+export default PageContact;

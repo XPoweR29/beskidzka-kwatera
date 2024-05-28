@@ -19,3 +19,5 @@ export const PageHome = () => {
 		</>
 	);
 };
+
+export default PageHome;

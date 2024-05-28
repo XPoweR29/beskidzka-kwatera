@@ -37,8 +37,6 @@ export const LinkBar = () => {
 		}
 	}, [location]);
 
-	useEffect(() => console.log(`Location has changed`), [location]);
-
 	const handleClick = () => {
 		setTimeout(() => {
 			setMobileMenuShown(false);

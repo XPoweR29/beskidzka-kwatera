@@ -3,7 +3,7 @@ import {Icon} from '@iconify/react';
 
 export const ScrollBtn = () => {
     return (
-			<button className={styles.btn}>
+			<button className={styles.btn} aria-label='Przewiń w dół'>
 				<Icon className={styles.arrow} icon='mingcute:down-line' />
 				<Icon className={styles.arrow} icon='mingcute:down-line' />
 				<Icon className={styles.arrow} icon='mingcute:down-line' />

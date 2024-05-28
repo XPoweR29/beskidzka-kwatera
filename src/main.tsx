@@ -1,50 +1,64 @@
-import ReactDOM from 'react-dom/client'
-import './index.scss'
-import { App } from './App'
-import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom'
-import { PageHome } from './components/PageHome/PageHome';
-import { PageContact } from './components/PageContact/PageContact';
-import { PageGallery } from './components/PageGallery/PageGallery';
-import { PageAttractions } from './components/PageAttractions/PageAttractions';
+import ReactDOM from 'react-dom/client';
+import './index.scss';
+import { App } from './App';
+import {
+	createBrowserRouter,
+	Navigate,
+	RouterProvider,
+} from 'react-router-dom';
+// import { PageHome } from './components/PageHome/PageHome';
+// import { PageContact } from './components/PageContact/PageContact';
+// import { PageGallery } from './components/PageGallery/PageGallery';
+// import { PageAttractions } from './components/PageAttractions/PageAttractions';
 import { TermsConditions } from './components/TermsConditions/TermsConditions';
 import { PrivacyPolicy } from './components/PrivacyPolicy/PrivacyPolicy';
+import { lazy, Suspense } from 'react';
+import { Loader } from './components/Loader/Loader';
+
+const PageHome = lazy(() => import('./components/PageHome/PageHome'));
+const PageContact = lazy(() => import('./components/PageContact/PageContact'));
+const PageAttractions = lazy(() => import('./components/PageAttractions/PageAttractions'));
+const PageGallery = lazy(() => import('./components/PageGallery/PageGallery'));
 
 const router = createBrowserRouter([
-    {
-        path: '/',
-        element: <App/>,
-        children: [
-            {
-                index: true,
-                element: <PageHome/>
-            },
-            {
-                path: 'kontakt',
-                element: <PageContact/>
-            }, 
-            {
-                path: 'galeria',
-                element: <PageGallery/>
-            },
-            {
-                path: 'atrakcje',
-                element: <PageAttractions/>
-            },
-            {
-                path: 'regulamin',
-                element: <TermsConditions/>
-            },
-            {
-                path: 'polityka-prywatnosci',
-                element: <PrivacyPolicy/>
-            },
-            {
-                path: '*',
-                element: <Navigate to={'/'}/>
-            }
-        ]
-    }
+	{
+		path: '/',
+		element: <App />,
+		children: [
+			{
+				index: true,
+				element: <PageHome />,
+			},
+			{
+				path: 'kontakt',
+				element: <PageContact />,
+			},
+			{
+				path: 'galeria',
+				element: <PageGallery />,
+			},
+			{
+				path: 'atrakcje',
+				element: <PageAttractions />,
+			},
+			{
+				path: 'regulamin',
+				element: <TermsConditions />,
+			},
+			{
+				path: 'polityka-prywatnosci',
+				element: <PrivacyPolicy />,
+			},
+			{
+				path: '*',
+				element: <Navigate to={'/'} />,
+			},
+		],
+	},
 ]);
 
-ReactDOM.createRoot(document.getElementById('root')!).render(<RouterProvider router={router}/>)
-
+ReactDOM.createRoot(document.getElementById('root')!).render(
+	<Suspense fallback={<Loader />}>
+		<RouterProvider router={router} />
+	</Suspense>
+);

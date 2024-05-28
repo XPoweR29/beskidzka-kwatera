@@ -7,19 +7,19 @@ import whiteWave_small from '../../assets/img/whiteWave_small.svg';
 import whiteWave_large from '../../assets/img/whiteWave.svg';
 import folk_sign from '../../assets/img/folk_sign_gray.svg';
 import folk_sign_big from '../../assets/img/folk_sign.svg';
-import butterfly from '../../assets/img/butterfly.png';
-import fort1 from '../../assets/photos/fort1.jpeg';
-import fort2 from '../../assets/photos/fort2.jpg';
-import statue1 from '../../assets/photos/statue1.jpg';
-import statue2 from '../../assets/photos/statue2.jpg';
-import boulevard1 from '../../assets/photos/boulevard1.jpg';
-import boulevard2 from '../../assets/photos/boulevard2.jpg';
-import gory1 from '../../assets/photos/gory1.jpg';
-import gory2 from '../../assets/photos/gory2.jpg';
-import bewery1 from '../../assets/photos/brewery1.jpg';
-import bewery2 from '../../assets/photos/brewery2.jpg';
-import inn1 from '../../assets/photos/inn1.jpg';
-import inn2 from '../../assets/photos/inn2.jpg';
+import butterfly from '../../assets/img/butterfly.webp';
+import fort1 from '../../assets/photos/fort1.avif';
+import fort2 from '../../assets/photos/fort2.avif';
+import statue1 from '../../assets/photos/statue1.avif';
+import statue2 from '../../assets/photos/statue2.avif';
+import boulevard1 from '../../assets/photos/boulevard1.avif';
+import boulevard2 from '../../assets/photos/boulevard2.avif';
+import gory1 from '../../assets/photos/gory1.avif';
+import gory2 from '../../assets/photos/gory2.avif';
+import bewery1 from '../../assets/photos/brewery1.avif';
+import bewery2 from '../../assets/photos/brewery2.avif';
+import inn1 from '../../assets/photos/inn1.avif';
+import inn2 from '../../assets/photos/inn2.avif';
 import wave__small from '../../assets/img/blackWave_small.svg';
 import wave__large from '../../assets/img/blackWave.svg';
 import bg_wave from '../../assets/img/bg_wave.svg';
@@ -274,3 +274,5 @@ export const PageAttractions = () => {
 		</>
 	);
 };
+
+export default PageAttractions;

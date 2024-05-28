@@ -1,9 +1,9 @@
 import { PricingCard } from '../PricingCard/PricingCard';
 import styles from './PricingCards.module.scss';
-import bouelvard from '../../assets/photos/boulevard.jpg';
-import path from '../../assets/photos/path_sign.jpg';
-import biking from '../../assets/photos/biking.jpg';
-import bunker from '../../assets/photos/bunker.jpg';
+import bouelvard from '../../assets/photos/boulevard.avif';
+import path from '../../assets/photos/path_sign.avif';
+import biking from '../../assets/photos/biking.avif';
+import bunker from '../../assets/photos/bunker.avif';
 
 interface Props {
 	className?: string;

@@ -39,12 +39,14 @@ export const SwiperButtons = ({swiperRef, className, disableControl = true}: Pro
 				//nadanie klasy disabled w zależności od stanu swipera
 				className={`${styles.prev} ${disableControl&&slideStart?styles.disabled:''}`} 
 				// zdarzenie na klinięcie - zmiana slajdu dla referencji swipera. 
-				onClick={() => swiperRef.current?.slidePrev()}> 
+				onClick={() => swiperRef.current?.slidePrev()}
+				aria-label='Poprzedni slajd'> 
 				<Icon icon='raphael:arrowleft' />
 			</button>
 			<button
 				className={`${styles.next} ${disableControl&&slideEnd?styles.disabled:''}`}
-				onClick={() => swiperRef.current?.slideNext()}>
+				onClick={() => swiperRef.current?.slideNext()}
+				aria-label='Następny slajd'>
 				<Icon icon='raphael:arrowright' />
 			</button>
 		</div>

@@ -4,7 +4,7 @@ import { ScrollSpySection } from '../ScrollSpySection/ScrollSpySection';
 import { AppContext } from '../../context/AppContext';
 import { Wrapper } from '../Wrapper/Wrapper';
 import folk_sign from '../../assets/img/folk_sign_gray.svg';
-import butterfly from '../../assets/img/butterfly.png';
+import butterfly from '../../assets/img/butterfly.webp';
 import bg_wave from '../../assets/img/bg_wave.svg';
 import wave_small from '../../assets/img/blackWave_small.svg';
 import wave_large from '../../assets/img/blackWave.svg';
@@ -80,3 +80,5 @@ export const PageGallery = () => {
 		</>
 	);
 };
+
+export default PageGallery;

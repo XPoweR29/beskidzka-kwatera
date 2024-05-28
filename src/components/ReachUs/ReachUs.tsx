@@ -43,7 +43,8 @@ export const ReachUs = () => {
 							width='600'
 							height='450'
 							className={styles.map}
-							loading='lazy'></iframe>
+							loading='lazy'
+							title='map'></iframe>
 					</AnimeContent>
 
 					<AnimeContent direction='right'>

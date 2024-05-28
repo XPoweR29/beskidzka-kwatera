@@ -12,7 +12,7 @@ export const Footer = () => {
 				<img src={logo} alt='kwatery u zosi - logo' className={styles.logo} />
 
 				<div className={`${styles.item} ${styles['item--address']}`}>
-					<h4 className={styles.title}>Kwatery u Zosi</h4>
+					<h3 className={styles.title}>Kwatery u Zosi</h3>
 					<a href='https://www.google.com/maps/?q=Węgierska+Górka+ul+Zielona+136'>
 						ul. Zielona 136, 34-350 Węgierska Górka
 					</a>
@@ -23,7 +23,7 @@ export const Footer = () => {
 				</div>
 
 				<div className={`${styles.item} ${styles['item--links']}`}>
-					<h4 className={styles.title}>Zobacz również</h4>
+					<h3 className={styles.title}>Zobacz również</h3>
 					<a href='/galeria'>galeria obiektu</a>
 					<a href='/atrakcje'>lokalne atrakcje</a>
 					<a href='/kontakt'>informacje kontaktowe</a>
