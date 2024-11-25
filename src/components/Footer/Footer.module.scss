@@ -1,0 +1,101 @@
+.footer {
+	position: relative;
+	background-color: black;
+	overflow-x: clip;
+	color: white;
+	padding-top: 2em;
+
+	.wrapper {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding-top: 6em;
+		gap: 4em;
+	}
+
+	.logo {
+		position: absolute;
+		top: -10px;
+		left: 10px;
+		z-index: 2;
+	}
+
+	.item {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 1em;
+
+		text-align: center;
+		font-size: 0.85em;
+		opacity: 0.7;
+		font-weight: 200;
+
+		.title {
+			font-size: 1.15em;
+			letter-spacing: 1px;
+			font-weight: 400;
+		}
+
+		&Links {
+			.title {
+				text-transform: uppercase;
+			}
+			
+			a {
+				letter-spacing: 1px;
+			}
+		}
+
+		&Info {
+			span a {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	&__signature {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin: 1em 0;
+		opacity: 0.7;
+
+		p {
+			font-weight: 100;
+			font-size: 0.8em;
+		}
+
+		a {
+			padding: 0.5em;
+
+			img {
+				width: 70px;
+			}
+		}
+	}
+}
+
+@media(min-width: 992px) {
+	.footer {
+		padding-bottom: 2em;
+		.wrapper {
+			flex-direction: row;
+			flex-wrap: wrap;
+			gap: 2.5em;
+		}
+
+		.item {
+			width: 30%;
+		}
+
+		&__signature {
+			margin: auto;
+			margin-top: 4em;
+		}
+	}
+}

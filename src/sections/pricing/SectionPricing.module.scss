@@ -1,0 +1,159 @@
+@use '../../css/common' as *;
+
+.pricing {
+	padding-top: 2em;
+	padding-bottom: 2em;
+	overflow-x: hidden;
+
+	.wrapper {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.flowersImg {
+		position: absolute;
+		width: 180px;
+		left: 0;
+		top: 190px;
+		opacity: 0.6;
+	}
+
+	.heading {
+		@include heading;
+	}
+
+	.text {
+		@include text;
+		position: relative;
+		margin-top: 2em;
+		text-align: center;
+	}
+
+	.details {
+		margin-top: 3em;
+		color: $dark-gray;
+
+		.title {
+			@include link;
+			width: fit-content;
+			font-weight: bold;
+			margin-bottom: 0.5em;
+		}
+
+		ul {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: start;
+			gap: 1em;
+			padding-left: 2.5em;
+		}
+	}
+
+	.footer {
+		margin-top: 3em;
+		max-width: 690px;
+		padding: 1em;
+		font-weight: 450;
+		background-image: url('../../assets/img/paper_texture.webp');
+		border-radius: 10px;
+		box-shadow: -2px 2px 20px rgba(0, 0, 0, 0.3);
+		border: 1px solid $main-orange;
+
+		.notice {
+			@include link;
+			font-size: 1.1em;
+			text-decoration: none;
+		}
+
+		strong {
+			text-decoration: underline;
+		}
+	}
+
+	.checkIn_info {
+		position: relative;
+		width: 308px;
+		margin-top: 5em;
+		padding: 1em;
+		padding-top: 4em;
+		border-radius: 10px;
+		border: 1px solid $main-orange;
+		background-image: url('../../assets/img/paper_texture.webp');
+		background-size: cover;
+		background-position: center;
+		box-shadow: -2px 2px 20px rgba(0, 0, 0, 0.3);
+		scale: 0.85;
+
+		.heading {
+			position: absolute;
+			left: -30px;
+			top: -30px;
+			display: flex;
+			flex-direction: column;
+
+			span {
+				font-size: 2.2rem;
+				color: $dark-brown;
+				text-transform: none;
+				letter-spacing: 3px;
+				font-weight: 900;
+				line-height: 30px;
+
+				&:nth-child(2) {
+					padding-left: 2em;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 400px) {
+	.pricing {
+		.flowersImg {
+			top: 215px;
+			width: 200px;
+			left: 10px;
+		}
+
+		.checkIn_info {
+			margin-top: 7em;
+			scale: 1;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.pricing {
+		.checkIn_info {
+			width: fit-content;
+			margin-top: 10em;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.pricing {
+		.flowersImg {
+			top: 130px;
+			width: 250px;
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.pricing {
+		.flowersImg {
+			top: -30px;
+			width: 330px;
+			left: -30px;
+		}
+
+		.text {
+			width: 80%;
+		}
+	}
+}
