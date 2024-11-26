@@ -59,7 +59,7 @@ export const ReachUs = () => {
 				</div>
 
 				<p className={styles.info}>
-					Potrezebujesz dotakowej pomocy?{' '}
+					Potrzebujesz dodatkowej pomocy?{' '}
 					<a href='/kontakt'>Skontaktuj się z nami</a>, a chętnie odpowiemy na
 					wszystkie Twoje pytania dotyczące dojazdu i nie tylko.
 				</p>

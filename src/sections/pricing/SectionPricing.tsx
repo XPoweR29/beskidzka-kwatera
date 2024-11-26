@@ -19,7 +19,7 @@ export const SectionPricing = () => {
 			className={styles.pricing}
 			onVisible={() => setVisibleSection('cennik')}>
 			<Wrapper className={styles.wrapper}>
-				<img src={flowers} className={styles.flowersImg} alt=''/>
+				<img src={flowers} className={styles.flowersImg} alt='' />
 				<h2 className={styles.heading}>Cennik</h2>
 				<p className={styles.text}>
 					Zapraszamy do skorzystania z naszej wyjątkowej oferty pobytu w sercu
@@ -41,7 +41,7 @@ export const SectionPricing = () => {
 						</li>
 						<li>Dzieci w wieku od 2 do 4 lat zapraszamy z 50% rabatem.</li>
 						<li>
-							Goście od 5 lat wzwyż są pełnoprawnymi ekploratorami naszych
+							Goście od 5 lat wzwyż są pełnoprawnymi eksploratorami naszych
 							beskidzkich uroków
 						</li>
 					</ul>
@@ -50,7 +50,7 @@ export const SectionPricing = () => {
 				<p className={styles.footer}>
 					<strong className={styles.notice}>Uwaga:</strong> Wszystkie podane
 					ceny dotyczą pobytu za <strong>jedną dobę</strong>. Cennik jest
-					orientacyjny i może podlegać <strong>indywidualnym ustaleniom</strong>{' '}
+					orientacyjny i może podlegać <strong>indywidualnym ustaleniom</strong>
 					. Prosimy o kontakt w celu uzyskania dokładnej oferty.
 				</p>
 

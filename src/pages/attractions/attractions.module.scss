@@ -211,6 +211,14 @@
 
 @media (min-width: 576px) {
 	.attractions {
+		.header {
+			&__wrapper {
+				gap: 0.7em;
+			}
+			.divider {
+			}
+		}
+
 		.attraction {
 			.butterfly {
 				width: 215px;

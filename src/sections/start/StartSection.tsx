@@ -33,12 +33,15 @@ export const StartSection = () => {
 					Twoje miejsce w <span>Beskidach</span>{' '}
 				</h1>
 				<p className={styles.text}>
-					Witaj w Kwaterach u Zosi — Twoim mijescu z dala od domu. Odkryj
-					przestrzeń stowrzoną dla Twojego komfortu i relaksu. Poczuj harmonię z
+					Witaj w Kwaterach u Zosi — Twoim miejscu z dala od domu. Odkryj
+					przestrzeń stworzoną dla Twojego komfortu i relaksu. Poczuj harmonię z
 					otaczającą naturą i ciesz się naszą gościnnością przez cały rok.
 				</p>
 
-				<a href='#cennik' className={styles.ctaBtn}>
+				<a
+					href='#cennik'
+					className={styles.ctaBtn}
+					aria-label='Zarezeruj teraz! Przejdź do sekcji Cennik'>
 					Zarezerwuj teraz!
 				</a>
 
