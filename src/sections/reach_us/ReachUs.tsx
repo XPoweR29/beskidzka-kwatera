@@ -9,6 +9,7 @@ import { ScrollSpySection } from '../../components/ScrollSpySection/ScrollSpySec
 import { useBreakpoints } from '../../hooks/useBreakpoint';
 import { Wrapper } from '../../components/Wrapper/Wrapper';
 import { AnimeContent } from '../../components/AnimeContent/AnimeContent';
+import { Link } from 'gatsby';
 
 export const ReachUs = () => {
 	const { breakpoint } = useBreakpoints();
@@ -60,7 +61,7 @@ export const ReachUs = () => {
 
 				<p className={styles.info}>
 					Potrzebujesz dodatkowej pomocy?{' '}
-					<a href='/kontakt'>Skontaktuj się z nami</a>, a chętnie odpowiemy na
+					<Link to='/kontakt' aria-label='Skontaktuj się z nami'>Skontaktuj się z nami</Link>, a chętnie odpowiemy na
 					wszystkie Twoje pytania dotyczące dojazdu i nie tylko.
 				</p>
 			</Wrapper>

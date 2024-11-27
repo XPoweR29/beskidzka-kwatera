@@ -11,6 +11,7 @@ import * as styles from './StartSection.module.scss';
 import vector_small from '../../assets/img/homeVector_small.webp';
 import vector_large from '../../assets/img/homeVector_large.webp';
 import flowers from '../../assets/img/flowers.webp';
+import { Link } from 'gatsby';
 
 export const StartSection = () => {
 	const { breakpoint } = useBreakpoints();
@@ -38,12 +39,12 @@ export const StartSection = () => {
 					otaczającą naturą i ciesz się naszą gościnnością przez cały rok.
 				</p>
 
-				<a
-					href='#cennik'
+				<Link
+					to='#cennik'
 					className={styles.ctaBtn}
 					aria-label='Zarezeruj teraz! Przejdź do sekcji Cennik'>
 					Zarezerwuj teraz!
-				</a>
+				</Link>
 
 				<ScrollBtn />
 			</Wrapper>

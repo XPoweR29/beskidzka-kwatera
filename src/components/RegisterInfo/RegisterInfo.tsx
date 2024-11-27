@@ -6,6 +6,7 @@ import checkout_icon from '../../assets/icons/check-out_icon.svg';
 import money_icon from '../../assets/icons/payment_icon.svg';
 import info_icon from '../../assets/icons/info_icon.svg';
 import { AppContext } from '../../contexts/app.context';
+import { Link } from 'gatsby';
 
 export const RegisterInfo = () => {
 	const {setShowAccount} = useContext(AppContext)!
@@ -19,7 +20,7 @@ export const RegisterInfo = () => {
 				</div>
 				<p className={styles.text}>
 					Masz pytania lub chcesz złożyć rezerwację? <br />
-					<a href='/kontakt'>Skontaktuj się z nami</a> aby doasować pobyt do Twoich
+					<Link to='/kontakt' aria-label='Skontaktuj się z nami'>Skontaktuj się z nami</Link> aby doasować pobyt do Twoich
 					oczekiwań.
 				</p>
 			</div>

@@ -6,6 +6,7 @@ import './css/global.scss';
 import { AppContext, ContextProvider } from './contexts/app.context';
 import { AccountPopup } from './components/AccountPopup/AccountPopup';
 import { Toaster } from 'react-hot-toast';
+import { Loader } from './components/Loader/Loader';
 
 interface Props {
 	children: React.ReactNode;
@@ -18,6 +19,7 @@ const Layout = ({ className, children }: Props) => {
 	return (
 		<>
 			<Header />
+			<Loader/>
 			{showAccount && <AccountPopup />}
 			<main className={className} style={{ flexGrow: 1 }}>
 				{children}

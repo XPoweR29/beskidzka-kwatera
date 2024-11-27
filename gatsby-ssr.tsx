@@ -13,3 +13,4 @@ export const wrapPageElement: GatsbySSR['wrapPageElement'] = ({
 		</ContextProvider>
 	);
 };
+

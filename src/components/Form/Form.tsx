@@ -4,6 +4,7 @@ import * as styles from './Form.module.scss';
 import { validateForm } from '../../utils/formValidation';
 import emailjs from '@emailjs/browser';
 import {toast} from 'react-hot-toast';
+import { Link } from 'gatsby';
 
 interface Props {
 	className: string;
@@ -27,10 +28,6 @@ export const Form = ({ className }: Props) => {
 	const formRef = useRef<HTMLFormElement|null>(null);
 	const checkboxRef = useRef<HTMLInputElement|null>(null);
 
-    useEffect(() => {
-        console.log(process.env.GATSBY_EMAILJS_SERVICE_ID, process.env.GATSBY_TEST);
-    }, []);
-
 	const handleChange = (
 		e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
 	) => {
@@ -45,9 +42,9 @@ export const Form = ({ className }: Props) => {
 	const sendForm = (e: React.FormEvent) => {
 		e.preventDefault();
 
-        if (process.env.GATSBY_EMAILJS_SERVICE_ID || process.env.GATSBY_EMAILJS_TEMPLATE_ID || process.env.GATSBY_EMAILJS_PUBLIC_KEY) {
+        if (!process.env.GATSBY_EMAILJS_SERVICE_ID || !process.env.GATSBY_EMAILJS_TEMPLATE_ID || !process.env.GATSBY_EMAILJS_PUBLIC_KEY) {
             console.error('Missing required environment variables.');
-        }
+        } 
 
 		if (validateForm(formState, setErrors)) {
 			emailjs.sendForm(
@@ -119,8 +116,8 @@ export const Form = ({ className }: Props) => {
 				<input type='checkbox' required ref={checkboxRef}/>
 				<p>
 					Zapoznałem(-am) się i akceptuję {''}{' '}
-					<a href='/polityka-prywatnosci'>politykę prywatności</a> oraz {''}{' '}
-					<a href='/regulamin'>regulamin</a>.
+					<Link to='/polityka-prywatnosci'>politykę prywatności</Link> oraz {''}{' '}
+					<Link to='/regulamin'>regulamin</Link>.
 				</p>
 			</div>
 

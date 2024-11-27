@@ -8,6 +8,7 @@ import { ScrollSpySection } from '../../components/ScrollSpySection/ScrollSpySec
 import { AppContext } from '../../contexts/app.context';
 import { Wrapper } from '../../components/Wrapper/Wrapper';
 import { Brief } from '../../components/Brief/Brief';
+import { Link } from 'gatsby';
 
 export const SectionOffer = () => {
 	const { setVisibleSection } = useContext(AppContext)!;
@@ -18,11 +19,14 @@ export const SectionOffer = () => {
 			id='oferta'
 			onVisible={() => setVisibleSection('oferta')}>
 			<Wrapper className={styles.wrapper}>
+				<img
+					src={folk_sign}
+					className={styles.folk_sign}
+					draggable='false'
+					alt=''
+				/>
 
-				<img src={folk_sign} className={styles.folk_sign} draggable='false' alt=''/>
-				
-
-				<Brief className={styles.attractions_brief}/>	
+				<Brief className={styles.attractions_brief} />
 				<h2 className={styles.heading}>Nasza Oferta</h2>
 				<p className={styles.text}>
 					Odkryj idealne miejsce na wypoczynek w Beskidach, gdzie czekają na
@@ -34,17 +38,25 @@ export const SectionOffer = () => {
 					znajduje się tylko 10 minut jazdy samochodem. Zaplanuj swój pobyt w
 					sercu beskidzkiej natury już dziś, a więcej naszych przestrzeni
 					znajdziesz w{' '}
-					<a href='/galeria' className={styles.link}>
+					<Link
+						to='/galeria'
+						aria-label='Zobacz nasze pokoje'
+						className={styles.link}>
 						galerii
-					</a>
+					</Link>
 					.
 				</p>
 				<div className={styles.sectionImg}>
-					<a href='/galeria' className={styles.link}>
+					<Link to='/galeria' aria-label='Zobacz nasze pokoje' className={styles.link}>
 						Zobacz więcej
-						<Icon icon='tdesign:arrow-right' className={styles.arrow}/>
-					</a>
-					<img src={flowers} className={styles.flowers} draggable='false' alt=''/>
+						<Icon icon='tdesign:arrow-right' className={styles.arrow} />
+					</Link>
+					<img
+						src={flowers}
+						className={styles.flowers}
+						draggable='false'
+						alt=''
+					/>
 					<img
 						src={offer_photots}
 						className={styles.photos_img}

@@ -1,17 +1,18 @@
 @use './reset';
 @use './hamburger';
+@use './loader';
 @use './common' as *;
 
 body {
 	font-size: 1.4rem;
-	font-family: "Poppins", sans-serif;
+	font-family: 'Poppins', sans-serif;
 	min-width: 320px;
 
 	::selection {
 		background-color: $main-orange;
 	}
 
-	@media(min-width: 400px) {
+	@media (min-width: 400px) {
 		font-size: 1.6rem;
 	}
 

@@ -16,3 +16,17 @@ export const wrapPageElement: GatsbyBrowser['wrapPageElement'] = ({
 		</ContextProvider>
 	);
 };
+
+
+	window.onload = () => {
+		const loader: HTMLDivElement | null = document.querySelector('.loaderContainer');
+		
+		if(loader) {
+			loader.classList.add('hidden');
+			loader.addEventListener('transitionend', (e) => {
+				if(e.propertyName === "opacity") {
+					loader.remove();
+				}
+			});
+		}
+	}

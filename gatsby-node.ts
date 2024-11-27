@@ -21,6 +21,18 @@ export const createPages: GatsbyNode['createPages'] = async ({ actions }) => {
 		component: path.resolve('src/pages/attractions/index.tsx'),
 		context: {},
 	});
+
+	createPage({
+		path: '/polityka-prywatnosci',
+		component: path.resolve('src/pages/privacy-policy/index.tsx'),
+		context: {},
+	});
+
+	createPage({
+		path: '/regulamin',
+		component: path.resolve('src/pages/regulations/index.tsx'),
+		context: {},
+	});
 };
 
 export const onCreateWebpackConfig: GatsbyNode["onCreateWebpackConfig"] = ({ actions }) => {

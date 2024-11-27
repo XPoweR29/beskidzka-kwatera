@@ -1,0 +1,32 @@
+@use "../../css/common" as *;
+
+.wrapper {
+	@include text;
+	padding-top: 10em;
+	padding-bottom: 5em;
+
+	.title {
+		@include heading;
+		margin-bottom: 2em;
+		text-align: center;
+	}
+
+	h2 {
+		text-align: center;
+		margin: 1em 0;
+	}
+
+	ul {
+        li {
+            margin: 0.5em 0;
+        }
+		ul {
+			margin-left: 2em;
+		}
+	}
+
+	a {
+		@include link;
+		text-wrap: nowrap;
+	}
+}

@@ -3,6 +3,7 @@ import { Wrapper } from '../Wrapper/Wrapper';
 import * as styles from './Footer.module.scss';
 import logo from '../../assets/img/logo_white.svg';
 import dev_logo from '../../assets/img/dev_logo.svg';
+import { Link } from 'gatsby';
 
 export const Footer = () => {
     const currentYear = new Date().getFullYear();
@@ -25,16 +26,16 @@ export const Footer = () => {
 
 				<div className={`${styles.item} ${styles['itemLinks']}`}>
 					<h3 className={styles.title}>Zobacz również</h3>
-					<a href='/galeria'>galeria obiektu</a>
-					<a href='/atrakcje'>lokalne atrakcje</a>
-					<a href='/kontakt'>informacje kontaktowe</a>
+					<Link to='/galeria'>galeria obiektu</Link>
+					<Link to='/atrakcje'>lokalne atrakcje</Link>
+					<Link to='/kontakt'>informacje kontaktowe</Link>
 				</div>
 
 				<div className={`${styles.item} ${styles['itemInfo']}`}>
 					<p>© {currentYear} Kwtery u Zosi</p>
 					<p>Wszelkie prawa zastrzeżone</p>
 					<span>
-						<a href='/polityka-prywatnosci'>Polilstyka prywatności</a> | <a href='/regulamin'>Regulamin</a>
+						<Link to='/polityka-prywatnosci'>Polilstyka prywatności</Link> | <Link to='/regulamin'>Regulamin</Link>
 					</span>
 				</div>
 
@@ -43,6 +44,8 @@ export const Footer = () => {
 					<a
 						href='https://webcraft-studio.pl/'
 						target='_blank'
+						aria-label='strona webcraft-studio'
+						title='Zamów własną stronę internetową!'
 						rel='noopener noreferrer'>
 						<img src={dev_logo} alt='webcraft studio logo '/>
 					</a>
