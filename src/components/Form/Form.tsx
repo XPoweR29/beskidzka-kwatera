@@ -14,6 +14,7 @@ export interface FormState {
 	name: string;
 	email: string;
 	message: string;
+	phone?: string;
 }
 
 const initialFormState: FormState = {
@@ -28,9 +29,7 @@ export const Form = ({ className }: Props) => {
 	const formRef = useRef<HTMLFormElement|null>(null);
 	const checkboxRef = useRef<HTMLInputElement|null>(null);
 
-	const handleChange = (
-		e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-	) => {
+	const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
 		setFormState((prev) => ({
 			...prev,
 			[e.target.name]: e.target.value,
@@ -39,37 +38,46 @@ export const Form = ({ className }: Props) => {
 		setErrors((prev)=>({...prev, [e.target.name]: null}));
 	};
 
-	const sendForm = (e: React.FormEvent) => {
+	const sendForm = async (e: React.FormEvent) => {
 		e.preventDefault();
 
-        if (!process.env.GATSBY_EMAILJS_SERVICE_ID || !process.env.GATSBY_EMAILJS_TEMPLATE_ID || !process.env.GATSBY_EMAILJS_PUBLIC_KEY) {
-            console.error('Missing required environment variables.');
-        } 
+		try {
+			const formData = new FormData();
+			formData.append('name', formState.name);
+			formData.append('email', formState.email);
+			if (formState.phone) formData.append('phone', `+48${formState.phone}`);
+			formData.append('message', formState.message);
+			formData.append('sender', 'KLIENT@kwateryuzosi.pl');
+			formData.append('recipient', 'kontakt@kwateryuzosi.pl');
 
-		if (validateForm(formState, setErrors)) {
-			emailjs.sendForm(
-				process.env.GATSBY_EMAILJS_SERVICE_ID!,
-				process.env.GATSBY_EMAILJS_TEMPLATE_ID!,
-				formRef.current!,
-				process.env.GATSBY_EMAILJS_PUBLIC_KEY
-			).then(() => {
-					console.log('Form has been sent successfully');
-				}, (error) => {
-					console.error(error);
-				}
-			)
+			const response = await fetch(
+				'https://backendapp-gamma.vercel.app/api/send-mail',
+					{
+						method: 'POST',
+						body: formData,
+					}
+			);
 
-			toast.success('Dziękujemy! Twoja wiadomość została wysłana.', {
+			if(response.ok) {
+				toast.success('Dziękujemy! Twoja wiadomość została wysłana.', {
+					duration: 3000,
+					position: 'bottom-center',
+				});
+				setFormState(initialFormState);
+				checkboxRef.current!.checked = false;
+			}
+		} catch(err) {
+			toast.error('Błąd podczas wysyłania wiadomośći. Spróbuj ponownie później.', {
 				duration: 3000,
 				position: 'bottom-center',
 			});
-			setFormState(initialFormState);
-			checkboxRef.current!.checked = false;
-
-		} else {
-			console.error('Validation error occured.');
+			console.error(err);
 		}
+		
+
 	};
+
+
 
 	return (
 		<form className={`${styles.form} ${className}`} onSubmit={sendForm} ref={formRef}>
