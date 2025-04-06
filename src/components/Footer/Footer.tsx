@@ -32,10 +32,10 @@ export const Footer = () => {
 				</div>
 
 				<div className={`${styles.item} ${styles['itemInfo']}`}>
-					<p>© {currentYear} Kwtery u Zosi</p>
+					<p>© {currentYear} Kwatery u Zosi</p>
 					<p>Wszelkie prawa zastrzeżone</p>
 					<span>
-						<Link to='/polityka-prywatnosci'>Polilstyka prywatności</Link> | <Link to='/regulamin'>Regulamin</Link>
+						<Link to='/polityka-prywatnosci'>Polityka prywatności</Link> | <Link to='/regulamin'>Regulamin</Link>
 					</span>
 				</div>
 

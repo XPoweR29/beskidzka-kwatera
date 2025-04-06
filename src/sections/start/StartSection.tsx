@@ -12,6 +12,7 @@ import vector_small from '../../assets/img/homeVector_small.webp';
 import vector_large from '../../assets/img/homeVector_large.webp';
 import flowers from '../../assets/img/flowers.webp';
 import { Link } from 'gatsby';
+import { AnchorLink } from 'gatsby-plugin-anchor-links';
 
 export const StartSection = () => {
 	const { breakpoint } = useBreakpoints();
@@ -34,17 +35,17 @@ export const StartSection = () => {
 					Twoje miejsce w <span>Beskidach</span>{' '}
 				</h1>
 				<p className={styles.text}>
-					Witaj w Kwaterach u Zosi — Twoim miejscu z dala od domu. Odkryj
+					Witaj w Kwaterach u Zosi — Twoim miejscu na nocleg w Beskidach. Odkryj
 					przestrzeń stworzoną dla Twojego komfortu i relaksu. Poczuj harmonię z
 					otaczającą naturą i ciesz się naszą gościnnością przez cały rok.
 				</p>
 
-				<Link
+				<AnchorLink
 					to='#cennik'
 					className={styles.ctaBtn}
 					aria-label='Zarezeruj teraz! Przejdź do sekcji Cennik'>
 					Zarezerwuj teraz!
-				</Link>
+				</AnchorLink>
 
 				<ScrollBtn />
 			</Wrapper>

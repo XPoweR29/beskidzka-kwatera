@@ -17,16 +17,16 @@ export const wrapPageElement: GatsbyBrowser['wrapPageElement'] = ({
 	);
 };
 
+export const onRouteUpdateDelayed = () => {
+	window.dispatchEvent(new Event('show-loader'));
+};
 
-	window.onload = () => {
-		const loader: HTMLDivElement | null = document.querySelector('.loaderContainer');
-		
-		if(loader) {
-			loader.classList.add('hidden');
-			loader.addEventListener('transitionend', (e) => {
-				if(e.propertyName === "opacity") {
-					loader.remove();
-				}
-			});
-		}
-	}
+export const onRouteUpdate = () => {
+	window.dispatchEvent(new Event('hide-loader'));
+};
+
+export const onInitialClientRender = () => {
+	setTimeout(() => {
+		window.dispatchEvent(new Event('hide-loader'));
+	}, 500);
+};

@@ -17,11 +17,11 @@ import { SEO } from '../../components/SEO/SEO';
 export const PageGallery = () => {
 	const { setVisibleSection } = useContext(AppContext)!;
 	const { breakpoint } = useBreakpoints();
-	const [clickedImg, setClickedImg] = useState<IGatsbyImageData|null>(null);
+	const [clickedImg, setClickedImg] = useState<IGatsbyImageData | null>(null);
 	const [previewShown, setPreviewShown] = useState<boolean>(false);
-	const {photos} = useGallery();
+	const { photos } = useGallery();
 
-	console.log(photos)
+	console.log(photos);
 
 	const previewHandler = (photoSrc: IGatsbyImageData) => {
 		setClickedImg(photoSrc);
@@ -35,13 +35,13 @@ export const PageGallery = () => {
 				id='gallery'
 				onVisible={() => setVisibleSection('galeria')}>
 				<Wrapper className={styles.wrapper}>
-					<img src={butterfly} alt='' className={styles.butterflyImg}/>
-					<img src={bg_wave} className={styles.background_wave} alt=''/>
+					<img src={butterfly} alt='' className={styles.butterflyImg} />
+					<img src={bg_wave} className={styles.background_wave} alt='' />
 
 					<h2 className={styles.heading}>Galeria</h2>
 					<div className={styles.divider}>
 						<span className={styles.line}></span>
-						<img src={folk_sign} alt=''/>
+						<img src={folk_sign} alt='' />
 						<span className={styles.line}></span>
 					</div>
 
@@ -55,16 +55,33 @@ export const PageGallery = () => {
 					<div className={styles.container}>
 						{photos.map((photo, i) => {
 							return (
-								<div className={styles.thumbnail} key={i} onClick={()=>previewHandler(photo)}>
-									<GatsbyImage image={photo} alt='Pokój na wynajem, nocleg' className={styles.image}/>
+								<div
+									className={styles.thumbnail}
+									key={i}
+									onClick={() => previewHandler(photo)}>
+									<GatsbyImage
+										image={photo}
+										alt='Pokój na wynajem, nocleg'
+										className={styles.image}
+									/>
 								</div>
 							);
 						})}
 					</div>
 				</Wrapper>
 
-				{previewShown&&clickedImg&& <PhotoPreview photos={photos} isPreviewShown={setPreviewShown} clickedImg={clickedImg}/>}
-				<img src={breakpoint.lg?wave_large:wave_small} className={styles.wave} alt=''/>
+				{previewShown && clickedImg && (
+					<PhotoPreview
+						photos={photos}
+						isPreviewShown={setPreviewShown}
+						clickedImg={clickedImg}
+					/>
+				)}
+				<img
+					src={breakpoint.lg ? wave_large : wave_small}
+					className={styles.wave}
+					alt=''
+				/>
 			</ScrollSpySection>
 		</>
 	);
@@ -72,4 +89,30 @@ export const PageGallery = () => {
 
 export default PageGallery;
 
-export const Head = () => <SEO/>
+export const Head = () => (
+	<SEO
+		title='Galeria zdjęć | Komfortowe noclegi w Węgierskiej Górce – Kwatery u Zosi'
+		description='Zobacz naszą galerię zdjęć. Przytulne pokoje, malownicze widoki Beskidu Żywieckiego i idealne miejsce na wypoczynek w górach. Zarezerwuj już dziś!'
+		canonical='https://kwateryuzosi.pl/galeria'
+		schema={{
+			'@context': 'https://schema.org',
+			'@type': 'Accommodation',
+			name: 'Kwatery u Zosi - Galeria zdjęć',
+			description:
+				'Zobacz zdjęcia naszych pokoi, otoczenia i udogodnień. Komfort i natura w jednym miejscu.',
+			url: 'https://kwateryuzosi.pl/galeria',
+			address: {
+				'@type': 'PostalAddress',
+				streetAddress: 'ul. Zielona 136',
+				addressLocality: 'Węgierska Górka',
+				postalCode: '34-350',
+				addressCountry: 'PL',
+			},
+			geo: {
+				'@type': 'GeoCoordinates',
+				latitude: 49.61174914694431,
+				longitude: 19.12085678051011,
+			},
+		}}
+	/>
+);

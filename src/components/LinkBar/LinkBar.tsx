@@ -5,28 +5,34 @@ import * as styles from './LinkBar.module.scss';
 import { Link } from 'gatsby';
 import { AppContext } from '../../contexts/app.context';
 import { useLocation } from '@reach/router';
+import { AnchorLink } from 'gatsby-plugin-anchor-links';
 
 interface menuLink {
 	name: string;
 	href: string;
 	id?: string;
+	sectionLink: boolean;
 }
 
 export const menuLinks: menuLink[] = [
-	{ name: 'Start', href: '/', id: 'start' },
-	{ name: 'Oferta', href: '/#oferta', id: 'oferta' },
-	{ name: 'Udogodnienia', href: '/#udogodnienia', id: 'udogodnienia' },
-	{ name: 'Cennik', href: '/#cennik', id: 'cennik' },
-	{ name: 'Galeria', href: '/galeria', id: 'galeria' },
-	{ name: 'Atrakcje', href: '/atrakcje', id: 'atrakcje' },
-	{ name: 'Kontakt', href: '/kontakt', id: 'kontakt' },
+	{ name: 'Start', href: '/#home', id: 'start', sectionLink: true },
+	{ name: 'Oferta', href: '/#oferta', id: 'oferta', sectionLink: true },
+	{
+		name: 'Udogodnienia',
+		href: '/#udogodnienia',
+		id: 'udogodnienia',
+		sectionLink: true,
+	},
+	{ name: 'Cennik', href: '/#cennik', id: 'cennik', sectionLink: true },
+	{ name: 'Galeria', href: '/galeria', id: 'galeria', sectionLink: false },
+	{ name: 'Atrakcje', href: '/atrakcje', id: 'atrakcje', sectionLink: false },
+	{ name: 'Kontakt', href: '/kontakt', id: 'kontakt', sectionLink: false },
 ];
 
 export const LinkBar = () => {
 	const { setMobileMenuShown, visibleSection } = useContext(AppContext)!;
 	const location = useLocation();
-
-	//NOTE: wtf? How does it work? Be sure to take notes on this!
+	
 	useEffect(() => {
 		if (location.hash && location.pathname === '/') {
 			const id = location.hash.replace('#', '');
@@ -48,17 +54,29 @@ export const LinkBar = () => {
 
 	return (
 		<div className={styles.linkbar}>
-			{menuLinks.map((link, index) => (
-				<Link
-					className={`${styles.link} ${
-						visibleSection === link.id ? styles['linkActive'] : ''
-					}`}
-					to={link.href}
-					key={index}
-					onClick={handleClick}>
-					{link.name}
-				</Link>
-			))}
+			{menuLinks.map((link, index) => {
+				return link.sectionLink ? (
+					<AnchorLink
+						className={`${styles.link} ${
+							visibleSection === link.id ? styles['linkActive'] : ''
+						}`}
+						to={link.href}
+						key={index}
+						onAnchorLinkClick={handleClick}>
+						{link.name}
+					</AnchorLink>
+				) : (
+					<Link
+						className={`${styles.link} ${
+							visibleSection === link.id ? styles['linkActive'] : ''
+						}`}
+						to={link.href}
+						key={index}
+						onClick={handleClick}>
+						{link.name}
+					</Link>
+				);
+			})}
 		</div>
 	);
 };

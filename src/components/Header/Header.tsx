@@ -9,6 +9,7 @@ import { useContext } from 'react';
 import { useBreakpoints } from '../../hooks/useBreakpoint';
 import { AppContext } from '../../contexts/app.context';
 import { Link } from 'gatsby';
+import { AnchorLink } from 'gatsby-plugin-anchor-links';
 
 export const Header = () => {
   const {breakpoint} = useBreakpoints();
@@ -21,9 +22,9 @@ export const Header = () => {
 				mobileMenuShown ? styles['activeMobileMenu'] : ''
 			}`}>
 			<div className={styles.navbar_container}>
-				<Link to='/' className={styles.logo}>
+				<AnchorLink to='/#home' className={styles.logo}>
 					<img src={logo} alt='kwatery u zosi - logo' />
-				</Link>
+				</AnchorLink>
 
 				{breakpoint.lg ? (
 					<LinkBar />

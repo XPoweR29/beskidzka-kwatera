@@ -1,8 +1,11 @@
-import type { GatsbyConfig } from "gatsby";
+import type { GatsbyConfig } from 'gatsby';
 require('dotenv').config();
 
 const config: GatsbyConfig = {
 	graphqlTypegen: true,
+	siteMetadata: {
+		siteUrl: 'https://www.kwateryuzosi.pl',
+	},
 	plugins: [
 		'gatsby-plugin-sass',
 		{
@@ -19,6 +22,24 @@ const config: GatsbyConfig = {
 		'gatsby-plugin-sharp',
 		'gatsby-transformer-sharp',
 		'gatsby-plugin-image',
+		'gatsby-plugin-anchor-links',
+		`gatsby-plugin-sitemap`,
+		{
+			resolve: 'gatsby-plugin-robots-txt',
+			options: {
+				host: 'https://www.kwateryuzosi.pl',
+				sitemap: 'https://www.kwateryuzosi.pl/sitemap-index.xml',
+				policy: [{ userAgent: '*', allow: '/' }],
+			},
+		},
+		{
+			resolve: 'gatsby-plugin-htaccess',
+			options: {
+				https: true,
+				www: false,
+				ErrorDocument: '404.html', 
+			},
+		},
 	],
 };
 

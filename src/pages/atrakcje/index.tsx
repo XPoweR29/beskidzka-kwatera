@@ -37,7 +37,9 @@ export const PageAttractions = () => {
 	useEffect(() => {
 		function handleScroll() {
 			const offset = window.scrollY;
-			heroRef.current!.style.backgroundPositionY = `calc(${startHeroPosition} + ${offset * 0.5}px)`;
+			heroRef.current!.style.backgroundPositionY = `calc(${startHeroPosition} + ${
+				offset * 0.5
+			}px)`;
 		}
 
 		window.addEventListener('scroll', handleScroll);
@@ -59,7 +61,7 @@ export const PageAttractions = () => {
 						<h1 className={styles.header__title}> Odkrywaj Węgierską Górkę</h1>
 						<div className={styles.divider}>
 							<span className={styles.line}></span>
-							<img src={folk_sign} alt=''/>
+							<img src={folk_sign} alt='' />
 							<span className={styles.line}></span>
 						</div>
 					</Wrapper>
@@ -72,7 +74,7 @@ export const PageAttractions = () => {
 				</header>
 
 				<Wrapper className={styles.wrapper}>
-					<img src={bg_wave} className={styles.background_wave} alt=''/>
+					<img src={bg_wave} className={styles.background_wave} alt='' />
 					<img
 						src={bg_wave}
 						className={`${styles.background_wave} ${styles['background_wave_2']}`}
@@ -276,4 +278,65 @@ export const PageAttractions = () => {
 
 export default PageAttractions;
 
-export const Head = () => <SEO/>
+export const Head = () => (
+	<SEO
+		title='Atrakcje Węgierskiej Górki - Co Zobaczyć w Beskidzie Żywieckim?'
+		description='Poznaj atrakcje Beskidu Żywieckiego: szlaki górskie, Baranią Górę i rzekę Sołę. Odkryj, co robić w Węgierskiej Górce, blisko naszego obiektu.'
+		canonical='https://kwateryuzosi.pl/atrakcje'
+		schema={{
+			'@context': 'https://schema.org',
+			'@type': 'WebPage',
+			name: 'Atrakcje w okolicy - odkrywaj Beskid Żywiecki',
+			description:
+				'Dowiedz się, jakie atrakcje czekają na Ciebie w pobliżu Kwatery u Zosi. Odkryj Beskid Żywiecki i okolice.',
+			url: 'https://kwateryuzosi.pl/atrakcje',
+			mainEntity: {
+				'@type': 'ItemList',
+				itemListElement: [
+					{
+						'@type': 'TouristAttraction',
+						name: 'Forty z czasów II Wojny Światowej',
+						description:
+							'Historyczne forty z okresu II wojny światowej, położone w okolicach Beskidu Żywieckiego.',
+						position: 1,
+					},
+					{
+						'@type': 'TouristAttraction',
+						name: 'Aleja zbójników',
+						description:
+							'Malownicza aleja związana z lokalnym folklorem i legendami zbójników.',
+						position: 2,
+					},
+					{
+						'@type': 'TouristAttraction',
+						name: 'Bulwary nad Sołą',
+						description:
+							'Urokliwe miejsce na spacery wzdłuż rzeki Soły, idealne dla rodzin i miłośników natury.',
+						position: 3,
+					},
+					{
+						'@type': 'TouristAttraction',
+						name: 'Beskidzkie szlaki',
+						description:
+							'Popularne trasy turystyczne, takie jak Rysianka, Barania Góra i Główny Szlak Beskidzki (GSB).',
+						position: 4,
+					},
+					{
+						'@type': 'TouristAttraction',
+						name: 'Muzeum Browaru Żywiec',
+						description:
+							'Interaktywne muzeum prezentujące historię piwowarstwa w Żywcu.',
+						position: 5,
+					},
+					{
+						'@type': 'TouristAttraction',
+						name: 'Atrakcje gastronomiczne (karczmy)',
+						description:
+							'Lokalne karczmy oferujące regionalne specjały kuchni góralskiej.',
+						position: 6,
+					},
+				],
+			},
+		}}
+	/>
+);

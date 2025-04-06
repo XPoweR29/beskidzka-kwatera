@@ -1,49 +1,50 @@
-import * as React from "react"
-import { Link, HeadFC, PageProps } from "gatsby"
+import React from 'react';
+import * as styles from './404.module.scss';
+import { Wrapper } from '../components/Wrapper/Wrapper';
+import { useBreakpoints } from '../hooks/useBreakpoint';
+import wave__small from '../assets/img/blackWave_small.svg';
+import wave__large from '../assets/img/blackWave.svg';
+import { Link } from 'gatsby';
+import { SEO } from '../components/SEO/SEO';
 
-const pageStyles = {
-  color: "#232129",
-  padding: "96px",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
+const NotFoundPage = () => {
+	const { breakpoint } = useBreakpoints();
 
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
+	return (
+		<div className={styles.notFound}>
+			<Wrapper className={styles.wrapper}>
+				<div className={styles.container}>
+					<h1>
+						<span>Oops...</span>
+						<span>Chyba zabłądziłeś w Beskidach.</span>
+					</h1>
+				</div>
 
-const NotFoundPage: React.FC<PageProps> = () => {
-  return (
-    <main style={pageStyles}>
-      <h1 style={headingStyles}>Page not found</h1>
-      <p style={paragraphStyles}>
-        Sorry 😔, we couldn’t find what you were looking for.
-        <br />
-        {process.env.NODE_ENV === "development" ? (
-          <>
-            <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
-            <br />
-          </>
-        ) : null}
-        <br />
-        <Link to="/">Go home</Link>.
-      </p>
-    </main>
-  )
-}
+				<p className={styles.text}>
+					Wygląda na to, że ta ścieżka prowadzi donikąd. Wróć na{' '}
+					<Link to='/' className={styles.backLink}>
+						stronę główną
+					</Link>{' '}
+					i znajdź to, czego szukasz!
+				</p>
+			</Wrapper>
 
-export default NotFoundPage
+			<img
+				src={breakpoint.md ? wave__large : wave__small}
+				className={styles.wave}
+				alt=''
+			/>
+		</div>
+	);
+};
 
-export const Head: HeadFC = () => <title>Not found</title>
+export default NotFoundPage;
+
+export const Head = () => (
+	<SEO
+		title='Strona nie znaleziona | Kwatery u Zosi'
+		description='Ups! Strona, której szukasz, nie istnieje. Wróć na stronę główną, aby znaleźć interesujące informacje.'
+		canonical='https://kwteryuzosi.pl/404'>
+		<meta name='robots' content='noindex, follow' />
+	</SEO>
+);

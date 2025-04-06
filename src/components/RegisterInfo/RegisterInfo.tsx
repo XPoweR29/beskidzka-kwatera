@@ -20,7 +20,7 @@ export const RegisterInfo = () => {
 				</div>
 				<p className={styles.text}>
 					Masz pytania lub chcesz złożyć rezerwację? <br />
-					<Link to='/kontakt' aria-label='Skontaktuj się z nami'>Skontaktuj się z nami</Link> aby doasować pobyt do Twoich
+					<Link to='/kontakt' aria-label='Skontaktuj się z nami'>Skontaktuj się z nami</Link>, aby dopasować pobyt do Twoich
 					oczekiwań.
 				</p>
 			</div>

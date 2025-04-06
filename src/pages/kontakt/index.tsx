@@ -83,4 +83,39 @@ export const PageContact = () => {
 
 export default PageContact;
 
-export const Head = () => <SEO/>
+export const Head = () => (
+	<SEO
+		title='Kontakt - Zarezerwuj Nocleg w Beskidzie Żywieckim | Kwatery u Zosi'
+		description='Skontaktuj się z nami i zaplanuj swój wypoczynek w Beskidzie Żywieckim. Telefon, e-mail i lokalizacja w jednym miejscu.'
+		canonical='https://kwateryuzosi.pl/kontakt'
+		
+		schema={{
+			'@context': 'https://schema.org',
+			'@type': 'ContactPage',
+			name: 'Kontakt - Kwatery u Zosi',
+			description:
+				'Skontaktuj się z nami, aby zarezerwować nocleg lub uzyskać więcej informacji o Kwaterach u Zosi.',
+			url: 'https://kwateryuzosi.pl/kontakt',
+			contactPoint: {
+				'@type': 'ContactPoint',
+				telephone: '+48 607 262 643',
+				email: 'kontakt@kwateryuzosi.pl',
+				contactType: 'customer service',
+				areaServed: 'PL',
+				availableLanguage: 'Polish',
+			},
+			address: {
+				'@type': 'PostalAddress',
+				streetAddress: 'ul. Zielona 136',
+				addressLocality: 'Węgierska Górka',
+				postalCode: '34-350',
+				addressCountry: 'PL',
+			},
+			geo: {
+				'@type': 'GeoCoordinates',
+				latitude: 49.61174914694431,
+				longitude: 19.12085678051011,
+			},
+		}}
+	/>
+);
