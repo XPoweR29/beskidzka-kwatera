@@ -1,0 +1,32 @@
+@use '../../sass/common' as *;
+
+.item {
+	display: flex;
+    flex-direction: column;
+	justify-content: center;
+	align-items: center;
+    width: 40%;
+    height: 100px;
+    color: white;
+    opacity: 0;
+
+
+    &_anime {
+        animation: fadeInFromTop 0.7s forwards ease-in-out;
+    }
+
+    .icon {
+        font-size: 5rem;
+    }
+
+    .title {
+        font-weight: 500;
+        text-align: center;
+    }
+}
+
+@media(min-width:768px) {
+    .item {
+        width: 20%;
+    }
+}

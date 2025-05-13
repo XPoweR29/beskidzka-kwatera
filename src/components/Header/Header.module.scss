@@ -1,0 +1,62 @@
+@use '../../sass/common' as *;
+
+.nav {
+	position: fixed;
+	left: 50%;
+	top: 1em;
+	width: 90%;
+	height: 70px;
+	padding: 0.5em 0;
+	@include shadow;
+	transform: translateX(-50%);
+	z-index: 100;
+	border-radius: 10px;
+	background-color: white;
+	transition: height 0.5s;
+
+	&.activeMobileMenu {
+		height: 90%;
+	}
+
+	.navbar_container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		.logo {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding-left: 15px;
+			img {
+				width: 140px;
+			}
+		}
+
+		.burgerBtn {
+			-webkit-tap-highlight-color: transparent; 
+			-moz-user-focus: none; 
+		}
+	}
+
+	@media (min-width: 576px) {
+		max-width: 540px;
+	}
+	@media (min-width: 768px) {
+		max-width: 720px;
+	}
+	@media (min-width: 992px) {
+		max-width: 960px;
+		padding: 1em 2em;
+
+		.logo {
+			padding: 0;
+		}
+	}
+	@media (min-width: 1200px) {
+		max-width: 1140px;
+	}
+	@media (min-width: 1400px) {
+		max-width: 1320px;
+	}
+}
