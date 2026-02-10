@@ -2,7 +2,6 @@ import React from 'react';
 import Layout from './src/layout';
 import type { GatsbySSR } from 'gatsby';
 import { ContextProvider } from './src/contexts/app.context';
-import { title } from 'process';
 
 export const wrapPageElement: GatsbySSR['wrapPageElement'] = ({
 	element,

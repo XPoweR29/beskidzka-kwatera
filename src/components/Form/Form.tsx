@@ -1,8 +1,6 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState } from 'react';
 import { Icon } from '@iconify/react/dist/iconify.js';
 import * as styles from './Form.module.scss';
-import { validateForm } from '../../utils/formValidation';
-import emailjs from '@emailjs/browser';
 import {toast} from 'react-hot-toast';
 import { Link } from 'gatsby';
 
